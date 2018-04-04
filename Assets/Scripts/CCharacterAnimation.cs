@@ -26,10 +26,10 @@ public class CCharacterAnimation : MonoBehaviour {
 		switch (animType)
 		{
 			case ANIM_TYPE.IDLE:
-				_animator.SetBool("Move", false);
+				_animator.SetFloat("Speed", 0f);
 				break;
 			case ANIM_TYPE.WALK:
-				_animator.SetBool("Move", true);
+				_animator.SetFloat("Speed", 0.4f);
 				break;
 			case ANIM_TYPE.JUMP:
 				_animator.SetTrigger("Jump");
@@ -39,16 +39,6 @@ public class CCharacterAnimation : MonoBehaviour {
 				_animator.SetTrigger("Attack");
 				break;
 		}
-	}
-
-	public void setSpeedValue(float value)
-	{
-		_animator.SetFloat("Speed", value);
-	}
-
-	public float getSpeedValue()
-	{
-		return _animator.GetFloat("Speed");
 	}
 
 }

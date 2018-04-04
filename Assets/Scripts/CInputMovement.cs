@@ -23,6 +23,7 @@ public class CInputMovement : MonoBehaviour
     void Update()
     {
         Move();
+		Attack();
     }
 
     void Move()
@@ -33,8 +34,7 @@ public class CInputMovement : MonoBehaviour
 		_moveDir = new Vector3(h, 0f, v);
 		if (_moveDir == Vector3.zero)
 		{
-			_anim.setSpeedValue(0f);
-			// _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.IDLE);
+			_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.IDLE);
 		}
 		else
 		{
@@ -50,12 +50,20 @@ public class CInputMovement : MonoBehaviour
 			_moveDir *= speed;
 			_moveDir.y -= _gravity;
 
-			_anim.setSpeedValue(0.4f);
-			// _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.WALK);
+			_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.WALK);
 			_cc.Move(_moveDir * Time.deltaTime);
 
 			return;
 		}
     }
+
+	void Attack()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
+		}
+
+	}
 
 }
