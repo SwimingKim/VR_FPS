@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CCharacterShot : MonoBehaviour {
+
+	public float _shootDelayTime;
+	float _timer;
+
+	CCharacterAnimation _anim;
+
+	public GameObject _bulletPrefab;
+	public Transform _shotPos;
+	public float _shotPower;
+
+	void Awake()
+	{
+		_anim = GetComponent<CCharacterAnimation>();
+	}
+
+	void Update()
+	{
+		_timer += Time.deltaTime;
+
+		if (Input.GetKeyDown(KeyCode.Space) && _timer >= _shootDelayTime && Time.timeScale != 0)
+		{
+			Shot(_shotPos.position, _shotPos.forward, Camera.main.transform.rotation);
+		}
+
+		// Debug.Log(transform.position.y);
+		// if (transform.position.y > -0.2)
+		// {
+		// 	_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.SQUAT);
+		// }
+		// else
+		// {
+		// 	_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.NSQUAT);
+		// }
+	}
+
+	void Shot(Vector3 pos, Vector3 forward, Quaternion qt)
+	{
+		_timer = 0f;
+
+		_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
+
+		GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
+		bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;
+		Destroy(bullet, 0.5f);
+	}
+
+}

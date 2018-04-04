@@ -12,7 +12,7 @@ public class CCameraManager : MonoBehaviour {
 	void Awake()
 	{
 		IsRun = false;
-		speed = 3.0f;
+		speed = 2f;
 	}
 
 	void Update () {
