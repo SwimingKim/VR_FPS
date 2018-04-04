@@ -21,14 +21,7 @@ public class CGameManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0))
 		{
 			cameraManager.IsRun = !cameraManager.IsRun;
-			bool isRun = cameraManager.IsRun;
-			if (isRun) {
-				characterManager._anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.WALK);
-			}
-			else {
-				characterManager._anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.IDLE);
-			}
-			Debug.Log("!!");
+			characterManager._anim.PlayAnimation( cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE );
 		}
 		
 	}

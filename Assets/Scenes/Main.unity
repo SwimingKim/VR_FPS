@@ -495,21 +495,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114568051369256800, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 143908161734093666, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
-    - {fileID: 114568051369256800, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &68181300 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4466923305848014, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-    type: 2}
-  m_PrefabInternal: {fileID: 23652173}
 --- !u!1001 &68422766
 Prefab:
   m_ObjectHideFlags: 0
@@ -1184,23 +1172,12 @@ Transform:
   m_Father: {fileID: 1003878323}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &386892173 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1341785341753100, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
+--- !u!114 &386892174 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114954240012435918, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
     type: 2}
   m_PrefabInternal: {fileID: 23652173}
---- !u!114 &386892174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 386892173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7257246c3c1a9499d9cf98b30fde3d5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _anim: {fileID: 0}
 --- !u!1001 &487345059
 Prefab:
   m_ObjectHideFlags: 0
@@ -1559,23 +1536,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1975310f9e226ad41be662562353f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &708165356 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1029981603716904, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
+--- !u!114 &708165357 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114595063952260256, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
     type: 2}
   m_PrefabInternal: {fileID: 23652173}
---- !u!114 &708165357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 708165356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf44710cc23042a282449fc75f477fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 68181300}
 --- !u!1 &967492355
 GameObject:
   m_ObjectHideFlags: 0

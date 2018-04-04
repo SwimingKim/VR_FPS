@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ccaebcf8dc6cce84c9b4d6f4aeb33410
+guid: fdc9ddb8a53df451981c335573c1b607
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -50,9 +50,8 @@ ModelImporter:
     100088: RigSpine1
     100090: RigSpine2
     100092: RigSpine3
-    100094: Soldat
-    100096: //RootNode
-    100098: Soldier
+    100094: //RootNode
+    100096: Soldier
     400000: Rig
     400002: RigArmLeft1
     400004: RigArmLeft2
@@ -101,18 +100,13 @@ ModelImporter:
     400090: RigSpine2
     400092: RigSpine3
     400094: //RootNode
-    400096: Soldat
-    400098: Soldier
-    2300000: Soldat
-    3300000: Soldat
-    4300000: Soldat
-    4300002: Soldier
+    400096: Soldier
+    4300000: Soldier
     9500000: //RootNode
-    13700000: Soldat
-    13700002: Soldier
+    13700000: Soldier
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -129,7 +123,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5

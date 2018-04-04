@@ -49,6 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600504337599446}
+  - component: {fileID: 114595063952260256}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -260,10 +261,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4986696609245834}
-  - component: {fileID: 143908161734093666}
   - component: {fileID: 95942922579700662}
-  - component: {fileID: 114568051369256800}
   - component: {fileID: 114275228887793498}
+  - component: {fileID: 114954240012435918}
   m_Layer: 0
   m_Name: Sci-fi Soldier
   m_TagString: Untagged
@@ -1685,19 +1685,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41679d3338266415f88d226e6bf3d0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114568051369256800
+--- !u!114 &114595063952260256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029981603716904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf44710cc23042a282449fc75f477fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 4466923305848014}
+--- !u!114 &114954240012435918
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1341785341753100}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08101057976fa426d9db5212b952b83d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7257246c3c1a9499d9cf98b30fde3d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _gravity: 100
+  _anim: {fileID: 114275228887793498}
 --- !u!124 &124705723160170764
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1797,20 +1808,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.15389031, y: -0.032679334, z: 0.0000008046627}
     m_Extent: {x: 1.406606, y: 0.29788238, z: 0.8338523}
   m_DirtyAABB: 0
---- !u!143 &143908161734093666
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1341785341753100}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2.4869199
-  m_Radius: 0.55
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.03, z: -0.17}
