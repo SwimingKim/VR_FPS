@@ -41,7 +41,6 @@ public class CCharacterAnimation : MonoBehaviour {
 				_animator.SetBool("Squat", false);
 				break;
 			case ANIM_TYPE.ATTACK:
-				_animator.SetBool("Animing", true);
 				_animator.SetTrigger("Attack");
 				break;
 		}

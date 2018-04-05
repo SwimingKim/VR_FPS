@@ -11,11 +11,4 @@ public class CCharacterManager : MonoBehaviour {
 		_anim = GetComponent<CCharacterAnimation>();
 	}
 
-	// void Update()
-	// {
-	// 	Vector3 targetCamPos = Camera.main.transform.position + _offset;
-	// 	transform.position = Vector3.Lerp(transform.position, targetCamPos, _smoothing * Time.deltaTime);
-	// }
-
-	
 }
