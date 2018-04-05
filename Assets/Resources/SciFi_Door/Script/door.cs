@@ -13,4 +13,10 @@ void OnTriggerExit ( Collider obj  ){
 	thedoor= GameObject.FindWithTag("SF_Door");
 	thedoor.GetComponent<Animation>().Play("close");
 }
+
+void OnCollisionEnter(Collision collisionInfo)
+{	
+	Debug.Log("!!");
+	
+}
 }

@@ -30,7 +30,6 @@ public class GvrEditorEmulator : MonoBehaviour {
   // queries the camera pose during Update or LateUpdate after GvrEditorEmulator has been
   // updated will get the wrong value applied by GvrEditorEmulator intsead.
 #if UNITY_EDITOR
-  public CCharacterManager _char;
   public static GvrEditorEmulator Instance { get; private set; }
 
   private const string AXIS_MOUSE_X = "Mouse X";
