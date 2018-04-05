@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CCameraManager : MonoBehaviour {
 
-	[SerializeField] Transform camera;
+	public Transform _camera;
 	// [SerializeField] Transform character;
 
 	public bool IsRun { set; get; }
@@ -20,7 +20,7 @@ public class CCameraManager : MonoBehaviour {
 		if (!IsRun) return;
 		
 		RaycastHit hit;
-		Vector3 forwardDir = camera.transform.TransformDirection(Vector3.forward);
+		Vector3 forwardDir = _camera.transform.TransformDirection(Vector3.forward);
 		forwardDir.y = 0.0f;
 		if (Physics.Raycast(transform.position, forwardDir, out hit, 1.0f)) {
 			return;
