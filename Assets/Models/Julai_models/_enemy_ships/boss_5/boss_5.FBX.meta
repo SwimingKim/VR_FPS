@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: ccc16882cc8900446b9169430505f064
+timeCreated: 1463598964
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: armor003
+    100002: armor004
+    100004: //RootNode
+    100006: head011
+    100008: head012
+    100010: head013
+    100012: lap028
+    100014: lap030
+    100016: lap032
+    100018: lap034
+    100020: lap035
+    100022: lap036
+    100024: lap037
+    100026: lap038
+    100028: shtok001
+    100030: shtok002
+    100032: soplo005
+    100034: soplo006
+    100036: soplo007
+    100038: soplo008
+    400000: armor003
+    400002: armor004
+    400004: //RootNode
+    400006: head011
+    400008: head012
+    400010: head013
+    400012: lap028
+    400014: lap030
+    400016: lap032
+    400018: lap034
+    400020: lap035
+    400022: lap036
+    400024: lap037
+    400026: lap038
+    400028: shtok001
+    400030: shtok002
+    400032: soplo005
+    400034: soplo006
+    400036: soplo007
+    400038: soplo008
+    2300000: armor003
+    2300002: armor004
+    2300004: head011
+    2300006: head012
+    2300008: head013
+    2300010: lap028
+    2300012: lap030
+    2300014: lap032
+    2300016: lap034
+    2300018: lap035
+    2300020: lap036
+    2300022: lap037
+    2300024: lap038
+    2300026: shtok001
+    2300028: shtok002
+    2300030: soplo005
+    2300032: soplo006
+    2300034: soplo007
+    2300036: soplo008
+    3300000: armor003
+    3300002: armor004
+    3300004: head011
+    3300006: head012
+    3300008: head013
+    3300010: lap028
+    3300012: lap030
+    3300014: lap032
+    3300016: lap034
+    3300018: lap035
+    3300020: lap036
+    3300022: lap037
+    3300024: lap038
+    3300026: shtok001
+    3300028: shtok002
+    3300030: soplo005
+    3300032: soplo006
+    3300034: soplo007
+    3300036: soplo008
+    4300000: armor003
+    4300002: head011
+    4300004: lap028
+    4300006: lap030
+    4300008: lap032
+    4300010: lap034
+    4300012: shtok001
+    4300014: soplo005
+    4300016: soplo006
+    4300018: head012
+    4300020: soplo007
+    4300022: lap035
+    4300024: lap036
+    4300026: lap037
+    4300028: lap038
+    4300030: shtok002
+    4300032: head013
+    4300034: armor004
+    4300036: soplo008
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 892ab641c4a13c74db8dce2ea727b2cd
+timeCreated: 1463598964
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: armor001
+    100002: armor002
+    100004: //RootNode
+    100006: head+-+-001
+    100008: head+-+-002
+    100010: head010
+    100012: lap012
+    100014: lap013
+    100016: lap014
+    100018: lap015
+    100020: lap016
+    100022: lap017
+    100024: lap018
+    100026: lap019
+    100028: lap020
+    100030: lap027
+    100032: soplo003
+    100034: soplo004
+    100036: truck
+    100038: truck001
+    100040: vint011
+    100042: vint012
+    400000: armor001
+    400002: armor002
+    400004: //RootNode
+    400006: head+-+-001
+    400008: head+-+-002
+    400010: head010
+    400012: lap012
+    400014: lap013
+    400016: lap014
+    400018: lap015
+    400020: lap016
+    400022: lap017
+    400024: lap018
+    400026: lap019
+    400028: lap020
+    400030: lap027
+    400032: soplo003
+    400034: soplo004
+    400036: truck
+    400038: truck001
+    400040: vint011
+    400042: vint012
+    2300000: armor001
+    2300002: armor002
+    2300004: head+-+-001
+    2300006: head+-+-002
+    2300008: head010
+    2300010: lap012
+    2300012: lap013
+    2300014: lap014
+    2300016: lap015
+    2300018: lap016
+    2300020: lap017
+    2300022: lap018
+    2300024: lap019
+    2300026: lap020
+    2300028: lap027
+    2300030: soplo003
+    2300032: soplo004
+    2300034: truck
+    2300036: truck001
+    2300038: vint011
+    2300040: vint012
+    3300000: armor001
+    3300002: armor002
+    3300004: head+-+-001
+    3300006: head+-+-002
+    3300008: head010
+    3300010: lap012
+    3300012: lap013
+    3300014: lap014
+    3300016: lap015
+    3300018: lap016
+    3300020: lap017
+    3300022: lap018
+    3300024: lap019
+    3300026: lap020
+    3300028: lap027
+    3300030: soplo003
+    3300032: soplo004
+    3300034: truck
+    3300036: truck001
+    3300038: vint011
+    3300040: vint012
+    4300000: truck
+    4300002: truck001
+    4300004: lap020
+    4300006: head010
+    4300008: lap012
+    4300010: lap013
+    4300012: lap014
+    4300014: lap015
+    4300016: soplo003
+    4300018: vint011
+    4300020: lap027
+    4300022: lap016
+    4300024: lap017
+    4300026: lap018
+    4300028: lap019
+    4300030: soplo004
+    4300032: vint012
+    4300034: armor001
+    4300036: head+-+-001
+    4300038: armor002
+    4300040: head+-+-002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
