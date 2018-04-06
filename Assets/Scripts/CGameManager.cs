@@ -18,7 +18,7 @@ public class CGameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetKeyDown(KeyCode.LeftShift))
 		{
 			cameraManager.IsRun = !cameraManager.IsRun;
 			characterManager._anim.PlayAnimation( cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE );
