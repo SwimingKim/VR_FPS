@@ -2,29 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCameraManager : MonoBehaviour {
+public class CCameraManager : MonoBehaviour
+{
+    public Transform _camera;
 
-public Transform _camera;
+    public bool IsRun { set; get; }
+    float speed;
 
-	public bool IsRun { set; get; }
-	float speed;
+    void Awake()
+    {
+        IsRun = false;
+        speed = 2f;
+    }
 
-	void Awake()
-	{
-		IsRun = false;
-		speed = 2f;
-	}
+    void Update()
+    {
+        if (!IsRun) return;
 
-	void Update () {
-		if (!IsRun) return;
-		
-		RaycastHit hit;
-		Vector3 forwardDir = _camera.transform.TransformDirection(Vector3.forward);
-		forwardDir.y = 0.0f;
-		if (Physics.Raycast(transform.position, forwardDir, out hit, 1.0f)) {
-			return;
-		}
+        RaycastHit hit;
+        Vector3 forwardDir = _camera.transform.TransformDirection(Vector3.forward);
+        forwardDir.y = 0.0f;
+        if (Physics.Raycast(transform.position, forwardDir, out hit, 2.0f))
+        {
+            return;
+        }
 
-		transform.position += forwardDir * speed * Time.deltaTime;
-	}
+        transform.position += forwardDir * speed * Time.deltaTime;
+    }
 }
