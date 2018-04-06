@@ -2521,63 +2521,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4011769739903320, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011769739903320, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1.011
-      objectReference: {fileID: 0}
-    - target: {fileID: 4011769739903320, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 224400288044986076, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224400288044986076, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 143141599574909202, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395780565710154, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 143737923070921402, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 143141599574909202, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 143141599574909202, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Radius
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 143141599574909202, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 143737923070921402, guid: 0328ed6c2cbe64fbaa5adb1c2faade97,
-        type: 2}
-      propertyPath: m_Center.y
-      value: -1.59
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0328ed6c2cbe64fbaa5adb1c2faade97, type: 2}
   m_IsPrefabParent: 0
