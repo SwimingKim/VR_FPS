@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CCameraManager : MonoBehaviour {
 
-	public Transform _camera;
-	// [SerializeField] Transform character;
+public Transform _camera;
 
 	public bool IsRun { set; get; }
 	float speed;
@@ -27,6 +26,5 @@ public class CCameraManager : MonoBehaviour {
 		}
 
 		transform.position += forwardDir * speed * Time.deltaTime;
-		// character.position += forwardDir * speed * Time.deltaTime;
 	}
 }

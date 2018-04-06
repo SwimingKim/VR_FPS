@@ -11,4 +11,12 @@ public class CCharacterManager : MonoBehaviour {
 		_anim = GetComponent<CCharacterAnimation>();
 	}
 
+	// void Update()
+	// {
+	// 	if (Input.GetKeyDown(KeyCode.Space))
+	// 	{
+	// 		_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.JUMP);
+	// 	}
+	// }
+
 }

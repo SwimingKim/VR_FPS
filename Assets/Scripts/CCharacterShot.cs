@@ -22,20 +22,10 @@ public class CCharacterShot : MonoBehaviour {
 	{
 		_timer += Time.deltaTime;
 
-		if (Input.GetKeyDown(KeyCode.Space) && _timer >= _shootDelayTime && Time.timeScale != 0)
+	if (Input.GetKeyDown(KeyCode.LeftShift) && _timer >= _shootDelayTime && Time.timeScale != 0)
 		{
 			Shot(_shotPos.position, _shotPos.forward, Camera.main.transform.rotation);
 		}
-
-		// Debug.Log(transform.position.y);
-		// if (transform.position.y > -0.2)
-		// {
-		// 	_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.SQUAT);
-		// }
-		// else
-		// {
-		// 	_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.NSQUAT);
-		// }
 	}
 
 	void Shot(Vector3 pos, Vector3 forward, Quaternion qt)
