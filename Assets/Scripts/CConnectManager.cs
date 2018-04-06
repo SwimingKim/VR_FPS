@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class CConnectManager : MonoBehaviour
 {
 
+	public Text _text;
     public InputField _nameInputField;
-    public static bool IsJoinRoom = false;
+    // public static bool IsJoinRoom = false;
+	int index = 0;
+	string[] message = { "Welcome to VR World:)", "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Enter키를 눌러주세요." };
 
     void Awake()
     {
@@ -17,14 +22,20 @@ public class CConnectManager : MonoBehaviour
         }
     }
 
-    // void Update()
-    // {
+	public void setFocusInputField(bool b)
+	{
+		EventSystem.current.SetSelectedGameObject(b ? _nameInputField.gameObject : null, null);
+		// _nameInputField.OnPointerClick(null);
+	}
 
-    // }
+	public void SetActiveInputField(bool b)
+	{
+		_nameInputField.gameObject.SetActive(b);
+	}
 
     public void OnJoinedLobby()
     {
-        Debug.Log("Photon Cloud Lobby Connectes..");
+        _text.text = "Photon Cloud Lobby Connectes..";
 
         PhotonNetwork.JoinOrCreateRoom(
 			"Room",
@@ -36,12 +47,16 @@ public class CConnectManager : MonoBehaviour
 			},
 			TypedLobby.Default
 		);
+
     }
 
 	public void OnJoinedRoom()
 	{
 		Debug.Log("Photon Room Joined");
-		IsJoinRoom = true;
+		SetActiveInputField(true);
+
+		StartCoroutine("ShowMessage");
+		setFocusInputField(true);
 	}
 
 	public void OnFailedToConnectToPhoton(DisconnectCause cause)
@@ -59,22 +74,34 @@ public class CConnectManager : MonoBehaviour
 		Debug.Log("[오류] 방 접속을 실패함 : " + errorMsg[1].ToString());
 	}
 
-	public void OnCreatePhotonObject()
+	public void OnStartPhotonGame()
 	{
-		Debug.Log("Photon init");
+		Debug.Log("시작");
+		StopCoroutine("ShowMessage");
+
+		SetActiveInputField(false);
 
 		Debug.Log(PhotonNetwork.room.PlayerCount.ToString());
-		PhotonNetwork.playerName = "skim";
+		PhotonNetwork.playerName = _nameInputField.text;
 
-		
+		_text.text = PhotonNetwork.playerName+"님 환영합니다:)";
+
+		StartCoroutine("ChangeScene");
 	}
 
-	// public void OnCreatePhotonObjectBtnClick(string prefabName)
-	// {
+	IEnumerator ShowMessage()
+	{
+		_text.text = message[index];
+		index = index == message.Length-1 ? 0 : index+1;
+			
+		yield return new WaitForSeconds(1);
+		StartCoroutine("ShowMessage");
+	}
 
-	// }
-	
-
-
+	IEnumerator ChangeScene()
+	{
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene("Main");
+	}
 
 }
