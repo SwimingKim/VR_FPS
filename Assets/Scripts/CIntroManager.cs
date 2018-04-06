@@ -7,7 +7,7 @@ public class CIntroManager : MonoBehaviour {
 
 	public Text _text;
 	int index = 0;
-	string[] message = { "Welcome to VR World:)", "Please Submit your charcter name." };
+	string[] message = { "Welcome to VR World:)", "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Enter키를 눌러주세요." };
 
 	void Start()
 	{
