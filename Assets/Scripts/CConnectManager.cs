@@ -12,7 +12,7 @@ public class CConnectManager : MonoBehaviour
     public InputField _nameInputField;
     // public static bool IsJoinRoom = false;
 	int index = 0;
-	string[] message = { "Welcome to VR World:)", "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Enter키를 눌러주세요." };
+	string[] message = { "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Enter키를 눌러주세요.", "잠시후 게임을 시작합니다." };
 
     void Awake()
     {
@@ -35,7 +35,7 @@ public class CConnectManager : MonoBehaviour
 
     public void OnJoinedLobby()
     {
-        _text.text = "Photon Cloud Lobby Connectes..";
+        _text.text = "서버와의 통신을 시작합니다.";
 
         PhotonNetwork.JoinOrCreateRoom(
 			"Room",

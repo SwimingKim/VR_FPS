@@ -466,7 +466,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 41504033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -767,7 +767,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 130768682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,6 +789,75 @@ Transform:
   m_Father: {fileID: 1987617243}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.0018758298, y: 25.872763, z: 0.0021603508}
+--- !u!1 &137985990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 137985991}
+  - component: {fileID: 137985993}
+  - component: {fileID: 137985992}
+  m_Layer: 0
+  m_Name: TotalHp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &137985991
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137985990}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 809465193}
+  m_Father: {fileID: 1204822328}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 3}
+  m_SizeDelta: {x: 50, y: 5}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &137985992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137985990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.42214534, g: 0.42341906, b: 0.44852942, a: 0.478}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &137985993
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137985990}
 --- !u!1 &184011247
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +867,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 184011248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,6 +889,76 @@ Transform:
   m_Father: {fileID: 1551403202}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.39902142, y: -13.729955, z: 27.18638}
+--- !u!1 &200160914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 200160915}
+  - component: {fileID: 200160917}
+  - component: {fileID: 200160916}
+  m_Layer: 0
+  m_Name: GunPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &200160915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200160914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 510559053}
+  - {fileID: 791445957}
+  m_Father: {fileID: 1580488384}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.0000019073486}
+  m_SizeDelta: {x: 100, y: -0.0000038146973}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &200160916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200160914}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6397059, g: 0.45626083, b: 0.45626083, a: 0.109}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &200160917
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200160914}
 --- !u!1 &212186486
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +968,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 212186487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +1004,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 251171678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1347,7 +1486,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 326356847}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPos
   m_TagString: Untagged
   m_Icon: {fileID: 571167235653111936, guid: 0000000000000000d000000000000000, type: 0}
@@ -1380,6 +1519,7 @@ GameObject:
   - component: {fileID: 326362532}
   - component: {fileID: 326362531}
   - component: {fileID: 326362530}
+  - component: {fileID: 326362533}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1402,6 +1542,7 @@ RectTransform:
   - {fileID: 730665682}
   - {fileID: 1555783677}
   - {fileID: 1270910938}
+  - {fileID: 1580488384}
   m_Father: {fileID: 776436565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1426,7 +1567,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
 --- !u!114 &326362531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,8 +1609,20 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!65 &326362533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 326362528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &334192277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1632,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 334192278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,11 +1653,6 @@ Transform:
   m_Father: {fileID: 1570370778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.35403702, y: 0.8621804, z: 31.72393}
---- !u!4 &344997683 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1204465672}
 --- !u!1 &360895600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,7 +1712,7 @@ RectTransform:
   m_GameObject: {fileID: 384958095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1270910938}
   m_RootOrder: 0
@@ -1594,8 +1742,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fb2836c9b0f94435dae653227aae7f5b, type: 3}
-    m_FontSize: 8
+    m_Font: {fileID: 12800000, guid: 171b07e6748b04398af1a3eda659eaf9, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1606,7 +1754,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ready To Attack
+  m_Text: "\uACF5\uACA9\uC744 \uC900\uBE44\uD574\uC8FC\uC138\uC694"
 --- !u!222 &384958098
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1702,6 +1850,75 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393813127}
   m_Mesh: {fileID: 4300000, guid: f92961f1fb9b04dff92f9d52bdc72230, type: 3}
+--- !u!1 &441770454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 441770455}
+  - component: {fileID: 441770457}
+  - component: {fileID: 441770456}
+  m_Layer: 0
+  m_Name: CharacterPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &441770455
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441770454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1204822328}
+  m_Father: {fileID: 1580488384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.0000019073486}
+  m_SizeDelta: {x: 100, y: -0.0000038146973}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &441770456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441770454}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.10110295, g: 0.24125257, b: 0.4044118, a: 0.353}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &441770457
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441770454}
 --- !u!1001 &487345059
 Prefab:
   m_ObjectHideFlags: 0
@@ -1831,7 +2048,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 489191500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1853,6 +2070,74 @@ Transform:
   m_Father: {fileID: 1551403202}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.3635506, y: -0.7057795, z: 13.272728}
+--- !u!1 &510559052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 510559053}
+  - component: {fileID: 510559055}
+  - component: {fileID: 510559054}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510559053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510559052}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 200160915}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -20, y: 5}
+  m_SizeDelta: {x: 10, y: 10}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &510559054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510559052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c0135eb17f3be4ebeb06ae4180182d7e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &510559055
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510559052}
 --- !u!1001 &530030650
 Prefab:
   m_ObjectHideFlags: 0
@@ -1966,6 +2251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timerText: {fileID: 1716195402}
   _messageText: {fileID: 384958097}
+  _gamePanel: {fileID: 1580488383}
   _anims:
   - {fileID: 1471461963}
   - {fileID: 1322122946}
@@ -1986,7 +2272,7 @@ GameObject:
   - component: {fileID: 540466372}
   - component: {fileID: 540466374}
   - component: {fileID: 540466373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SciFiRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,7 +2346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 544572191}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571034460}
   - component: {fileID: 571034461}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,7 +2571,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 592856605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2372,7 +2658,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 651170788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2471,7 +2757,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 660421670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2597,7 +2883,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 690254513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2627,7 +2913,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 709682392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2658,7 +2944,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 717417270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2761,7 +3047,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 753616189}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2798,6 +3084,143 @@ Transform:
   m_Father: {fileID: 969599574}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &791445956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 791445957}
+  - component: {fileID: 791445959}
+  - component: {fileID: 791445958}
+  m_Layer: 0
+  m_Name: PointPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &791445957
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791445956}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2021433455}
+  m_Father: {fileID: 200160915}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -30, y: 0}
+  m_SizeDelta: {x: 40, y: 20}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &791445958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791445956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &791445959
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791445956}
+--- !u!1 &809465192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 809465193}
+  - component: {fileID: 809465195}
+  - component: {fileID: 809465194}
+  m_Layer: 0
+  m_Name: CurrentHp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &809465193
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809465192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 137985991}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &809465194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809465192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.25200042, g: 0.32096782, b: 0.43382353, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ec3337bfb1af34846ab102d8420f64d6, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0.836
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &809465195
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809465192}
 --- !u!1 &839429038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,7 +3230,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 839429039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2829,6 +3252,35 @@ Transform:
   m_Father: {fileID: 592856605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 8.998078, y: -3.4754736, z: -24.010887}
+--- !u!1 &852444854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 852444855}
+  m_Layer: 9
+  m_Name: Profile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &852444855
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852444854}
+  m_LocalRotation: {x: 0.026799805, y: -0.9384036, z: 0.07475778, w: 0.33629107}
+  m_LocalPosition: {x: 1.0260403, y: 0.11973691, z: 0.6015816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1089770554}
+  m_Father: {fileID: 969599574}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864652911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,7 +3290,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 864652912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigSpine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,7 +3334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 884215775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegLeft3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2912,7 +3364,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 886004510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3028,6 +3480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 776436565}
+  - {fileID: 852444855}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3195,7 +3648,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1026328045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3216,6 +3669,87 @@ Transform:
   m_Father: {fileID: 1306995829}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 2.8640182, y: -1.0752035, z: 4.6025715}
+--- !u!1 &1089770553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1089770554}
+  - component: {fileID: 1089770557}
+  - component: {fileID: 1089770556}
+  - component: {fileID: 1089770555}
+  m_Layer: 9
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089770554
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089770553}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 852444855}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1089770555
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089770553}
+  m_Enabled: 0
+--- !u!124 &1089770556
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089770553}
+  m_Enabled: 1
+--- !u!20 &1089770557
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089770553}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21707399, g: 0.34139815, b: 0.53676474, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0.02
+    y: 0
+    width: 15
+    height: 15
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 27
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 5
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1108973124
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,7 +3759,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1108973125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3256,7 +3790,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1170610788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3286,7 +3820,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1176559600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,48 +3907,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1204465672
-Prefab:
+--- !u!1 &1204822327
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2103043671}
-    m_Modifications:
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.00000008096495
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.000001045362
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.00000009249695
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000029802312
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.000000029802312
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071069
-      objectReference: {fileID: 0}
-    - target: {fileID: 4960804557798780, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e73f2b52b021b458d9130fd35d9f86c6, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1204822328}
+  - component: {fileID: 1204822330}
+  - component: {fileID: 1204822329}
+  m_Layer: 0
+  m_Name: profile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1204822328
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204822327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 137985991}
+  - {fileID: 2108871426}
+  m_Father: {fileID: 441770455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 5, y: 3}
+  m_SizeDelta: {x: 25, y: 18}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1204822329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204822327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 50ad6ceb8d4cf46beac1107e02078e95, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1204822330
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204822327}
 --- !u!4 &1213044971 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4756533346440150, guid: 4694d625f5bfc4a2088994277336ad92,
@@ -3772,7 +4334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1227295927}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3961,7 +4523,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1306995829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigNeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3997,7 +4559,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1326290827}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4028,7 +4590,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1339974225}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigSpine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4150,7 +4712,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1386292473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4181,7 +4743,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1441450329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4216,7 +4778,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1448097524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegRight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4246,7 +4808,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1467537151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4282,7 +4844,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1473171032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegRight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4313,7 +4875,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1473714066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4344,7 +4906,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1482173368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLeftPistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4379,7 +4941,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1551403202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeft3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4483,7 +5045,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1570370778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4505,6 +5067,76 @@ Transform:
   m_Father: {fileID: 489191500}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.025336403, y: -0.0349619, z: 36.115208}
+--- !u!1 &1580488383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1580488384}
+  - component: {fileID: 1580488386}
+  - component: {fileID: 1580488385}
+  m_Layer: 0
+  m_Name: GamePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1580488384
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580488383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 441770455}
+  - {fileID: 200160915}
+  m_Father: {fileID: 326362529}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 20}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1580488385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580488383}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1580488386
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1580488383}
 --- !u!1 &1618120439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,7 +5146,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1618120440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4545,7 +5177,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1669611542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4592,7 +5224,7 @@ RectTransform:
   m_GameObject: {fileID: 1716195400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1555783677}
   m_RootOrder: 0
@@ -4622,8 +5254,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fb2836c9b0f94435dae653227aae7f5b, type: 3}
-    m_FontSize: 8
+    m_Font: {fileID: 12800000, guid: 171b07e6748b04398af1a3eda659eaf9, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4631,10 +5263,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: "10\uCD08"
 --- !u!222 &1716195403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4650,7 +5282,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1720894777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigAss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4683,7 +5315,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1784520247}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4714,7 +5346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1833516252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigLegRight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4749,7 +5381,7 @@ GameObject:
   - component: {fileID: 1895115319}
   - component: {fileID: 621619151}
   - component: {fileID: 1895115321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sci-fi Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4831,7 +5463,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1918865693}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4862,7 +5494,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1923827230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4892,7 +5524,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1926032588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigSpine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4973,7 +5605,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1987617243}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmRightFing11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5115,6 +5747,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1975310f9e226ad41be662562353f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2021433454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2021433455}
+  - component: {fileID: 2021433457}
+  - component: {fileID: 2021433456}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2021433455
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021433454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 791445957}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2021433456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021433454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 171b07e6748b04398af1a3eda659eaf9, type: 3}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "10\uBC1C \uC911 3\uBC1C \uC801\uC911"
+--- !u!222 &2021433457
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021433454}
 --- !u!1 &2103043670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5124,7 +5830,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2103043671}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigPistolRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5143,10 +5849,83 @@ Transform:
   m_LocalScale: {x: 1.0000011, y: 0.99999887, z: 1}
   m_Children:
   - {fileID: 540466372}
-  - {fileID: 344997683}
   m_Father: {fileID: 1441450329}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -10.734764, y: 171.29419, z: 89.16372}
+--- !u!1 &2108871425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2108871426}
+  - component: {fileID: 2108871428}
+  - component: {fileID: 2108871427}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2108871426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108871425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00017881393}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_Children: []
+  m_Father: {fileID: 1204822328}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 17.5, y: -2.999998}
+  m_SizeDelta: {x: -15, y: -8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2108871427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108871425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 171b07e6748b04398af1a3eda659eaf9, type: 3}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 40 / 100
+--- !u!222 &2108871428
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108871425}
 --- !u!1 &2122833607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,7 +5935,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2122833608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigArmLeftFing42
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,6 +7,7 @@ public class CGameManager : MonoBehaviour
 {
     public Text _timerText;
     public Text _messageText;
+	public GameObject _gamePanel;
 	public Animation[] _anims;
 
     [SerializeField] CCameraManager cameraManager;
@@ -14,7 +15,16 @@ public class CGameManager : MonoBehaviour
 
 	void Start()
 	{
-		Debug.Log(PhotonNetwork.room.PlayerCount.ToString());
+		try
+		{
+			_gamePanel.SetActive(false);
+			Debug.Log(PhotonNetwork.room.PlayerCount.ToString());
+		}
+		catch (System.Exception)
+		{
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
+			throw;
+		}
 		
 		StartCoroutine("ShowTimer");
 	}
@@ -31,16 +41,17 @@ public class CGameManager : MonoBehaviour
 	IEnumerator ShowTimer()
 	{
 		yield return new WaitForSeconds(1);
-		int sec = int.Parse(_timerText.text);
+		int sec = int.Parse(_timerText.text.Replace("초", ""));
 		if (sec > 0)
 		{
-			_timerText.text = (sec-1).ToString();
+			_timerText.text = (sec-1).ToString()+"초";
 			StartCoroutine("ShowTimer");
 		}
 		else
 		{
-			_timerText.text = "Good Luck, "+PhotonNetwork.playerName;
-			_messageText.text = "Time to Attack";
+			_gamePanel.SetActive(true);
+			_timerText.text = PhotonNetwork.playerName+", 행운을 빌어요.";
+			_messageText.text = "";
 			for (var i=0; i < _anims.Length; i++)
 			{
 				_anims[i].Play("open");
