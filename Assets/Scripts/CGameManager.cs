@@ -10,22 +10,29 @@ public class CGameManager : MonoBehaviour
 	public GameObject _gamePanel;
 	public Animation[] _anims;
 
+	public GameObject _player;
+    CCharacterManager characterManager;
+
     [SerializeField] CCameraManager cameraManager;
-    [SerializeField] CCharacterManager characterManager;
+
+	void Awake()
+	{
+		characterManager = GetComponent<CCharacterManager>();
+	}
 
 	void Start()
 	{
-		try
-		{
-			_gamePanel.SetActive(false);
-			Debug.Log(PhotonNetwork.room.PlayerCount.ToString());
-		}
-		catch (System.Exception)
+		if (!PhotonNetwork.connected)
 		{
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
-			throw;
+			return;
 		}
-		
+
+		Vector3 pos = new Vector3(_player.transform.position.x, 0, _player.transform.position.z);
+		GameObject localPlyer = PhotonNetwork.Instantiate(_player.name, pos, Quaternion.identity, 0);
+		localPlyer.transform.SetParent(Camera.main.transform);
+
+		_gamePanel.SetActive(false);
 		StartCoroutine("ShowTimer");
 	}
 
@@ -38,6 +45,18 @@ public class CGameManager : MonoBehaviour
         }
     }
 
+	void StartGame()
+	{
+		_gamePanel.SetActive(true);
+		_timerText.text = PhotonNetwork.playerName+", 행운을 빌어요.";
+		_messageText.text = "";
+		for (var i=0; i < _anims.Length; i++)
+		{
+			_anims[i].Play("open");
+		}
+
+	}
+
 	IEnumerator ShowTimer()
 	{
 		yield return new WaitForSeconds(1);
@@ -49,13 +68,7 @@ public class CGameManager : MonoBehaviour
 		}
 		else
 		{
-			_gamePanel.SetActive(true);
-			_timerText.text = PhotonNetwork.playerName+", 행운을 빌어요.";
-			_messageText.text = "";
-			for (var i=0; i < _anims.Length; i++)
-			{
-				_anims[i].Play("open");
-			}
+			StartGame();
 			StopCoroutine("ShowTimer");
 		}
 		

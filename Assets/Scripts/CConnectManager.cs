@@ -76,6 +76,11 @@ public class CConnectManager : MonoBehaviour
 
 	public void OnStartPhotonGame()
 	{
+		Debug.Log(_nameInputField.text.Length);
+		if (_nameInputField.text.Length == 0) {
+			return;
+		}
+
 		Debug.Log("시작");
 		StopCoroutine("ShowMessage");
 
