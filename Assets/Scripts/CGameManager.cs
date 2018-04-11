@@ -10,10 +10,13 @@ public class CGameManager : MonoBehaviour
 	public GameObject _gamePanel;
 	public Animation[] _anims;
 
-	public Vector3 _pos;
-    CCharacterAnimation _anim;
-
     [SerializeField] CCameraManager cameraManager;
+	[SerializeField] CPlayerManager playerManager;
+
+	void Awake()
+	{
+		playerManager = GetComponent<CPlayerManager>();
+	}
 
 	void Start()
 	{
@@ -23,7 +26,7 @@ public class CGameManager : MonoBehaviour
 			return;
 		}
 
-		initPlayerPrefab();
+		playerManager.initPlayerPrefab();
 
 		_gamePanel.SetActive(false);
 		StartCoroutine("ShowTimer");
@@ -34,23 +37,14 @@ public class CGameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             cameraManager.IsRun = !cameraManager.IsRun;
-            _anim.PlayAnimation(cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE);
+			playerManager.PlayMotion(cameraManager.IsRun);
         }
     }
-
-	void initPlayerPrefab()
-	{
-		GameObject localPlyer = PhotonNetwork.Instantiate("Sci-fi Soldier", Vector3.zero, Quaternion.identity, 0);
-		localPlyer.transform.SetParent(Camera.main.transform);
-		localPlyer.transform.localPosition = _pos;
-
-		_anim = localPlyer.GetComponent<CCharacterAnimation>();
-	}
 
 	void StartGame()
 	{
 		_gamePanel.SetActive(true);
-		_timerText.text = PhotonNetwork.playerName+", 행운을 빌어요.";
+		_timerText.text = playerManager.playerName+", 행운을 빌어요.";
 		_messageText.text = "";
 		for (var i=0; i < _anims.Length; i++)
 		{
