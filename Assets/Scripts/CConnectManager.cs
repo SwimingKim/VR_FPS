@@ -10,9 +10,8 @@ public class CConnectManager : MonoBehaviour
 
 	public Text _text;
     public InputField _nameInputField;
-    // public static bool IsJoinRoom = false;
 	int index = 0;
-	string[] message = { "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Enter키를 눌러주세요.", "잠시후 게임을 시작합니다." };
+	string[] message = { "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Tab키를 눌러주세요.", "잠시후 게임을 시작합니다." };
 
     void Awake()
     {
@@ -21,6 +20,14 @@ public class CConnectManager : MonoBehaviour
             PhotonNetwork.ConnectUsingSettings("v1.0");
         }
     }
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Tab) && _nameInputField.isActiveAndEnabled)
+		{
+			OnStartPhotonGame();
+		}
+	}
 
 	public void setFocusInputField(bool b)
 	{
@@ -106,6 +113,9 @@ public class CConnectManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2);
 		SceneManager.LoadScene("Main");
+
+		// GameObject localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
+        // localPlyer.transform.SetParent(Camera.main.transform);
 	}
 
 }

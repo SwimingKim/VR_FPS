@@ -12,7 +12,8 @@ public class CPlayerManager : MonoBehaviour
 
     public void initPlayerPrefab()
     {
-        GameObject localPlyer = PhotonNetwork.Instantiate("Sci-fi Soldier", Vector3.zero, Quaternion.identity, 0);
+
+        GameObject localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
         localPlyer.transform.SetParent(Camera.main.transform);
         localPlyer.transform.localPosition = _pos;
 

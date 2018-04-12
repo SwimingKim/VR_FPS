@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "VR_FPS",
+"dataUrl": "vr_fps.data.unityweb",
+"asmCodeUrl": "vr_fps.asm.code.unityweb",
+"asmMemoryUrl": "vr_fps.asm.memory.unityweb",
+"asmFrameworkUrl": "vr_fps.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
