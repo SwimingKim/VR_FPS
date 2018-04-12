@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class CGameManager : MonoBehaviour
 {
+	public GameObject player;
+	public Vector3 gamePos;
+	public Quaternion gameRotation;
+
     public Text _timerText;
     public Text _messageText;
 	public GameObject _gamePanel;
@@ -18,20 +22,6 @@ public class CGameManager : MonoBehaviour
 		playerManager = GetComponent<CPlayerManager>();
 	}
 
-	void Start()
-	{
-		if (!PhotonNetwork.connected)
-		{
-			UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
-			return;
-		}
-
-		playerManager.initPlayerPrefab();
-
-		_gamePanel.SetActive(false);
-		StartCoroutine("ShowTimer");
-	}
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
@@ -41,7 +31,17 @@ public class CGameManager : MonoBehaviour
         }
     }
 
-	void StartGame()
+	public void StartGame()
+	{
+		// player.transform.rotation = gameRotation;
+		player.transform.position = gamePos;
+		playerManager.initPlayerPrefab();
+
+		_gamePanel.SetActive(false);
+		StartCoroutine("ShowTimer");
+	}
+
+	void OnCountOut()
 	{
 		_gamePanel.SetActive(true);
 		_timerText.text = playerManager.playerName+", 행운을 빌어요.";
@@ -50,7 +50,6 @@ public class CGameManager : MonoBehaviour
 		{
 			_anims[i].Play("open");
 		}
-
 	}
 
 	IEnumerator ShowTimer()
@@ -64,9 +63,8 @@ public class CGameManager : MonoBehaviour
 		}
 		else
 		{
-			StartGame();
+			OnCountOut();
 			StopCoroutine("ShowTimer");
 		}
-		
 	}
 }

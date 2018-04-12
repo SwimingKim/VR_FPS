@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class CConnectManager : MonoBehaviour
 {
-
 	public Text _text;
     public InputField _nameInputField;
 	int index = 0;
@@ -15,6 +13,7 @@ public class CConnectManager : MonoBehaviour
 
     void Awake()
     {
+		_nameInputField.gameObject.SetActive(false);
         if (!PhotonNetwork.connected)
         {
             PhotonNetwork.ConnectUsingSettings("v1.0");
@@ -112,10 +111,8 @@ public class CConnectManager : MonoBehaviour
 	IEnumerator ChangeScene()
 	{
 		yield return new WaitForSeconds(2);
-		SceneManager.LoadScene("Main");
 
-		// GameObject localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
-        // localPlyer.transform.SetParent(Camera.main.transform);
+		GetComponent<CGameManager>().StartGame();
 	}
 
 }
