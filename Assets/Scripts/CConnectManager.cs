@@ -58,7 +58,6 @@ public class CConnectManager : MonoBehaviour
 
 	public void OnJoinedRoom()
 	{
-		Debug.Log("Photon Room Joined");
 		SetActiveInputField(true);
 
 		StartCoroutine("ShowMessage");
@@ -86,7 +85,6 @@ public class CConnectManager : MonoBehaviour
 			return;
 		}
 
-		Debug.Log("시작");
 		StopCoroutine("ShowMessage");
 
 		SetActiveInputField(false);

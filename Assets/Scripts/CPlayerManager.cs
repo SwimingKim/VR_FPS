@@ -7,7 +7,6 @@ public class CPlayerManager : MonoBehaviour
 {
 	public string playerName { set; get; }
 	public Vector3 _pos;
-    public Quaternion _rotation;
 
     CCharacterAnimation _anim;
 
@@ -18,7 +17,6 @@ public class CPlayerManager : MonoBehaviour
         localPlyer.transform.SetParent(Camera.main.transform);
         localPlyer.transform.localPosition = _pos;
         localPlyer.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-        // localPlyer.transform.localRotation = _rotation;
 
 		playerName = PhotonNetwork.playerName;
 

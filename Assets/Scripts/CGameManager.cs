@@ -7,7 +7,6 @@ public class CGameManager : MonoBehaviour
 {
 	public GameObject player;
 	public Vector3 gamePos;
-	public Quaternion gameRotation;
 
     public Text _timerText;
     public Text _messageText;
@@ -16,6 +15,9 @@ public class CGameManager : MonoBehaviour
 
     [SerializeField] CCameraManager cameraManager;
 	[SerializeField] CPlayerManager playerManager;
+
+	public GameObject _introCanvas;
+	public GameObject _gameCanvas;
 
 	void Awake()
 	{
@@ -33,7 +35,9 @@ public class CGameManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		// player.transform.rotation = gameRotation;
+		_introCanvas.SetActive(false);
+		_gameCanvas.SetActive(true);
+
 		player.transform.position = gamePos;
 		playerManager.initPlayerPrefab();
 
