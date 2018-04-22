@@ -60,6 +60,7 @@ public class CConnectManager : MonoBehaviour
     {
         SetActiveInputField(true);
 
+
         StartCoroutine("ShowMessage");
         setFocusInputField(true);
     }
