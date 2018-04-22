@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class CCharacterMovement : Photon.MonoBehaviour
 {
-    public Transform _camera;
-    
+    public CCameraManager cameraManager;
     CCharacterAnimation _anim;
-    CCameraManager cameraManager;
-
-    Vector3 currPos = Vector3.zero;
-    Quaternion currRot = Quaternion.identity;
 
     void Awake()
     {
         _anim = GetComponent<CCharacterAnimation>();
-        cameraManager = GameObject.FindWithTag("Control").GetComponent<CCameraManager>();
     }
 
     void Update()
@@ -25,39 +19,13 @@ public class CCharacterMovement : Photon.MonoBehaviour
             if (photonView.isMine)
 				photonView.RPC("Move", PhotonTargets.All, photonView.viewID);
         }
-
-        // if (photonView.isMine)
-        // {
-
-        // }
-        // else
-        // {
-        //     Vector3 pos = transform.position;
-        //     Quaternion rot = transform.rotation;
-        //     transform.position = Vector3.Lerp(pos, currPos, Time.deltaTime*3.0f);
-        //     transform.rotation = Quaternion.Slerp(transform.rotation, currRot, Time.deltaTime*3.0f);
-        // }
     }
 
     [PunRPC]
     void Move(int viewId)
     {
         cameraManager.IsRun = !cameraManager.IsRun;
-        _anim.PlayAnimation( cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE );
+        _anim.PlayAnimation(cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE);
     }
-
-    // void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    // {
-    //     if (stream.isWriting)
-    //     {
-    //         stream.SendNext(cameraManager.transform.position);
-    //         stream.SendNext(cameraManager.transform.rotation);
-    //     }
-    //     else
-    //     {
-    //         currPos = (Vector3) stream.ReceiveNext();
-    //         currRot = (Quaternion) stream.ReceiveNext();
-    //     }
-    // }
 
 }
