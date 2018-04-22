@@ -24,15 +24,6 @@ public class CGameManager : MonoBehaviour
 		playerManager = GetComponent<CPlayerManager>();
 	}
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            cameraManager.IsRun = !cameraManager.IsRun;
-			playerManager.PlayMotion(cameraManager.IsRun);
-        }
-    }
-
 	public void StartGame()
 	{
 		_introCanvas.SetActive(false);

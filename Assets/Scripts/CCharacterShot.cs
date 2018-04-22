@@ -2,41 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCharacterShot : MonoBehaviour {
+public class CCharacterShot : Photon.MonoBehaviour
+{
+    public float _shootDelayTime;
+    float _timer;
 
-	public float _shootDelayTime;
-	float _timer;
+    CCharacterAnimation _anim;
 
-	CCharacterAnimation _anim;
+    public GameObject _bulletPrefab;
+    public Transform _shotPos;
+    public float _shotPower;
 
-	public GameObject _bulletPrefab;
-	public Transform _shotPos;
-	public float _shotPower;
+    void Awake()
+    {
+        _anim = GetComponent<CCharacterAnimation>();
+    }
 
-	void Awake()
-	{
-		_anim = GetComponent<CCharacterAnimation>();
-	}
+    void FixedUpdate()
+    {
+		if (photonView.isMine) {
+	        _timer += Time.deltaTime;
 
-	void Update()
-	{
-		_timer += Time.deltaTime;
+			if (Input.GetKeyDown(KeyCode.LeftShift) && _timer >= _shootDelayTime && Time.timeScale != 0)
+			{
+				photonView.RPC("Shot", PhotonTargets.All, _shotPos.position, _shotPos.forward, transform.rotation, photonView.viewID);
+			}
+		} 
+    }
 
-	if (Input.GetKeyDown(KeyCode.LeftShift) && _timer >= _shootDelayTime && Time.timeScale != 0)
-		{
-			Shot(_shotPos.position, _shotPos.forward, Camera.main.transform.rotation);
-		}
-	}
+    [PunRPC]
+    public void Shot(Vector3 pos, Vector3 forward, Quaternion qt, int viewId)
+    {
+        _timer = 0f;
 
-	void Shot(Vector3 pos, Vector3 forward, Quaternion qt)
-	{
-		_timer = 0f;
+        _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
 
-		_anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
-
-		GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
-		bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;
-		Destroy(bullet, 0.5f);
-	}
+        GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
+        bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;
+        Destroy(bullet, 0.5f);
+    }
 
 }

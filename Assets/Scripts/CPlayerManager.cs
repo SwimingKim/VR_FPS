@@ -8,15 +8,16 @@ public class CPlayerManager : MonoBehaviour
 	public string playerName { set; get; }
 	public Vector3 _pos;
 
+    GameObject localPlyer;
     CCharacterAnimation _anim;
-
+    
     public void initPlayerPrefab()
     {
 
-        GameObject localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
-        localPlyer.transform.SetParent(Camera.main.transform);
-        localPlyer.transform.localPosition = _pos;
-        localPlyer.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
+        // localPlyer.transform.SetParent(Camera.main.transform);
+        // localPlyer.transform.localPosition = _pos;
+        // localPlyer.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
 
 		playerName = PhotonNetwork.playerName;
 
