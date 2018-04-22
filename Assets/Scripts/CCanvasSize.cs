@@ -7,13 +7,9 @@ public class CCanvasSize : MonoBehaviour {
 	void Start()
 	{
 		RectTransform rt = GetComponent<RectTransform>();
-		#if UNITY_ANDROID
+		#if UNITY_ANDROID && !UNITY_EDITOR
 		rt.sizeDelta = new Vector2(1920, 1450);
-		#elif UNITY_EDITOR || UNITY_WEBGL
-		rt.sizeDelta = new Vector2(1920, 1080);
 		#endif		
-		Debug.Log(rt.rect.height);
-
 	}
 
 }

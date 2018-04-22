@@ -44,4 +44,6 @@ MonoBehaviour:
   - TaggedPlayer
   - Shot
   - Move
+  - Die
+  - Damage
   DisableAutoOpenWizard: 1

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CCameraManager : MonoBehaviour
 {
+    public CCharacterAnimation _anim;
     public Transform _camera;
 
     public bool IsRun { set; get; }
@@ -17,7 +18,7 @@ public class CCameraManager : MonoBehaviour
 
     void Update()
     {
-        if (!IsRun) return;
+        if (!IsRun || _anim.IsDie()) return;
 
         RaycastHit hit;
         Vector3 forwardDir = _camera.transform.TransformDirection(Vector3.forward);
