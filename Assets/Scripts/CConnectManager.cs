@@ -9,7 +9,7 @@ public class CConnectManager : MonoBehaviour
     public Text _text;
     public InputField _nameInputField;
     int index = 0;
-    string[] message = { "캐릭터의 이름을 입력해주세요", "입력이 끝나면 Tab키를 눌러주세요.", "잠시후 게임을 시작합니다." };
+    string[] message = { "캐릭터의 이름을 입력해주세요", "입력이 끝나면 확인을 눌러주세요.", "이름이 없으면 랜덤으로 이름이 정해집니다.", "잠시후 게임을 시작합니다." };
 
     void Awake()
     {
@@ -20,18 +20,10 @@ public class CConnectManager : MonoBehaviour
         }
     }
 
-    // void Update()
-    // {
-    // 	if (Input.GetKeyDown(KeyCode.Tab) && _nameInputField.isActiveAndEnabled)
-    // 	{
-    // 		OnStartPhotonGame();
-    // 	}
-    // }
-
     public void setFocusInputField(bool b)
     {
         EventSystem.current.SetSelectedGameObject(b ? _nameInputField.gameObject : null, null);
-        // _nameInputField.OnPointerClick(null);
+		// _nameInputField.OnPointerClick(null);
     }
 
     public void SetActiveInputField(bool b)
@@ -60,7 +52,6 @@ public class CConnectManager : MonoBehaviour
     {
         SetActiveInputField(true);
 
-
         StartCoroutine("ShowMessage");
         setFocusInputField(true);
     }
@@ -82,21 +73,23 @@ public class CConnectManager : MonoBehaviour
 
     public void OnStartPhotonGame()
     {
-        if (_nameInputField.text.Length == 0)
-        {
-            return;
-        }
-
+		string text = _nameInputField.text.Replace(" ", "");
+		string name = text.Length == 0 ? "user"+Random.Range(1000, 9999) : _nameInputField.text;
         StopCoroutine("ShowMessage");
 
         SetActiveInputField(false);
 
         Debug.Log("접속자 수 =" + PhotonNetwork.room.PlayerCount.ToString());
-        PhotonNetwork.playerName = _nameInputField.text;
+        PhotonNetwork.playerName = name;
 
         _text.text = PhotonNetwork.playerName + "님 환영합니다:)";
 
         StartCoroutine("ChangeScene");
+    }
+
+ 	public void ValueChangeTextField()
+    {
+		Debug.Log(_nameInputField.text);
     }
 
     IEnumerator ShowMessage()

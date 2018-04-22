@@ -3291,12 +3291,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114759788321807602, guid: aa4942f92ec7b49c793d5d51d8f79364,
+    - target: {fileID: 114968233780058018, guid: aa4942f92ec7b49c793d5d51d8f79364,
         type: 2}
       propertyPath: viewIdField
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114759788321807602, guid: aa4942f92ec7b49c793d5d51d8f79364,
+    - target: {fileID: 114968233780058018, guid: aa4942f92ec7b49c793d5d51d8f79364,
         type: 2}
       propertyPath: instantiationId
       value: 1
@@ -3311,19 +3311,15 @@ Prefab:
       propertyPath: instantiationId
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114968233780058018, guid: aa4942f92ec7b49c793d5d51d8f79364,
+    - target: {fileID: 114759788321807602, guid: aa4942f92ec7b49c793d5d51d8f79364,
         type: 2}
       propertyPath: viewIdField
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114968233780058018, guid: aa4942f92ec7b49c793d5d51d8f79364,
+    - target: {fileID: 114759788321807602, guid: aa4942f92ec7b49c793d5d51d8f79364,
         type: 2}
       propertyPath: instantiationId
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923109381579264, guid: aa4942f92ec7b49c793d5d51d8f79364, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa4942f92ec7b49c793d5d51d8f79364, type: 2}
@@ -4931,7 +4927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1309949431
 Transform:
   m_ObjectHideFlags: 0
@@ -5440,7 +5436,7 @@ MonoBehaviour:
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
-  m_HideMobileInput: 1
+  m_HideMobileInput: 0
   m_CharacterValidation: 0
   m_CharacterLimit: 10
   m_OnEndEdit:
