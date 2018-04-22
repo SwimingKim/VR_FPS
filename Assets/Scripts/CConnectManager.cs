@@ -89,7 +89,7 @@ public class CConnectManager : MonoBehaviour
 
 		SetActiveInputField(false);
 
-		Debug.Log(PhotonNetwork.room.PlayerCount.ToString());
+		Debug.Log("접속자 수 =" + PhotonNetwork.room.PlayerCount.ToString());
 		PhotonNetwork.playerName = _nameInputField.text;
 
 		_text.text = PhotonNetwork.playerName+"님 환영합니다:)";

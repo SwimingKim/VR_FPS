@@ -29,10 +29,4 @@ public class CCameraManager : MonoBehaviour
 
         transform.position += forwardDir * speed * Time.deltaTime;
     }
-
-    public void setGameMode()
-    {
-        Vector3 pos = _camera.transform.position;
-        _camera.transform.localPosition = new Vector3( pos.x, pos.y, 3 );
-    }
 }

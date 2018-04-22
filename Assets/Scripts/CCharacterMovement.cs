@@ -44,8 +44,6 @@ public class CCharacterMovement : Photon.MonoBehaviour
     {
         cameraManager.IsRun = !cameraManager.IsRun;
         _anim.PlayAnimation( cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE );
-        // manager.playerManager.PlayMotion(manager.cameraManager.IsRun);
-		// manager.cameraManager.IsRun = !manager.cameraManager.IsRun;
     }
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

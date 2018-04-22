@@ -10,14 +10,11 @@ public class CGameManager : MonoBehaviour
 	
 	public GameObject _introControl;
 	public GameObject _gameControl;
-	CPlayerManager playerManager;
 	CUIManager uiManager;
+	CCharacterManager characterManager;
 
 	void Awake()
 	{
-		playerManager = GetComponent<CPlayerManager>();
-		uiManager = GetComponent<CUIManager>();
-
 		_introControl.SetActive(true);
 		_gameControl.SetActive(false);
 	}
@@ -25,7 +22,10 @@ public class CGameManager : MonoBehaviour
 	public void StartGame()
 	{
 		_introControl.SetActive(false);
-		playerManager.initPlayerPrefab();
+
+        GameObject localPlyer = PhotonNetwork.Instantiate("PlayerControl", Vector3.zero, Quaternion.identity, 0);
+		uiManager = localPlyer.GetComponent<CUIManager>();
+		characterManager = localPlyer.GetComponent<CCharacterManager>();
 
 		_gamePanel.SetActive(false);
 		StartCoroutine("ShowTimer");
@@ -34,7 +34,7 @@ public class CGameManager : MonoBehaviour
 	void OnCountOut()
 	{
 		_gamePanel.SetActive(true);
-		uiManager._timerText.text = playerManager.playerName+", 행운을 빌어요.";
+		uiManager._timerText.text = characterManager.playerName+", 행운을 빌어요.";
 		uiManager._messageText.text = "";
 		for (var i=0; i < _anims.Length; i++)
 		{
@@ -45,7 +45,6 @@ public class CGameManager : MonoBehaviour
 	IEnumerator ShowTimer()
 	{
 		yield return new WaitForSeconds(1);
-		Debug.Log(uiManager._timerText.text);
 		int sec = int.Parse(uiManager._timerText.text.Replace("초", ""));
 		if (sec > 0)
 		{
