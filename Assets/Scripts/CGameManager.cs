@@ -5,31 +5,26 @@ using UnityEngine.UI;
 
 public class CGameManager : MonoBehaviour
 {
-	public GameObject player;
-	public Vector3 gamePos;
-
-    public Text _timerText;
-    public Text _messageText;
 	public GameObject _gamePanel;
 	public Animation[] _anims;
-
-    [SerializeField] CCameraManager cameraManager;
-	[SerializeField] CPlayerManager playerManager;
-
-	public GameObject _introCanvas;
-	public GameObject _gameCanvas;
+	
+	public GameObject _introControl;
+	public GameObject _gameControl;
+	CPlayerManager playerManager;
+	CUIManager uiManager;
 
 	void Awake()
 	{
 		playerManager = GetComponent<CPlayerManager>();
+		uiManager = GetComponent<CUIManager>();
+
+		_introControl.SetActive(true);
+		_gameControl.SetActive(false);
 	}
 
 	public void StartGame()
 	{
-		_introCanvas.SetActive(false);
-		_gameCanvas.SetActive(true);
-
-		player.transform.position = gamePos;
+		_introControl.SetActive(false);
 		playerManager.initPlayerPrefab();
 
 		_gamePanel.SetActive(false);
@@ -39,8 +34,8 @@ public class CGameManager : MonoBehaviour
 	void OnCountOut()
 	{
 		_gamePanel.SetActive(true);
-		_timerText.text = playerManager.playerName+", 행운을 빌어요.";
-		_messageText.text = "";
+		uiManager._timerText.text = playerManager.playerName+", 행운을 빌어요.";
+		uiManager._messageText.text = "";
 		for (var i=0; i < _anims.Length; i++)
 		{
 			_anims[i].Play("open");
@@ -50,10 +45,11 @@ public class CGameManager : MonoBehaviour
 	IEnumerator ShowTimer()
 	{
 		yield return new WaitForSeconds(1);
-		int sec = int.Parse(_timerText.text.Replace("초", ""));
+		Debug.Log(uiManager._timerText.text);
+		int sec = int.Parse(uiManager._timerText.text.Replace("초", ""));
 		if (sec > 0)
 		{
-			_timerText.text = (sec-1).ToString()+"초";
+			uiManager._timerText.text = (sec-1).ToString()+"초";
 			StartCoroutine("ShowTimer");
 		}
 		else

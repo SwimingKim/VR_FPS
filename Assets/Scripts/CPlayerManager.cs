@@ -13,8 +13,7 @@ public class CPlayerManager : MonoBehaviour
     
     public void initPlayerPrefab()
     {
-
-        localPlyer = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity, 0);
+        localPlyer = PhotonNetwork.Instantiate("PlayerControl", Vector3.zero, Quaternion.identity, 0);
         // localPlyer.transform.SetParent(Camera.main.transform);
         // localPlyer.transform.localPosition = _pos;
         // localPlyer.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
