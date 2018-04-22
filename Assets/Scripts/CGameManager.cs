@@ -23,7 +23,8 @@ public class CGameManager : MonoBehaviour
 	{
 		_introControl.SetActive(false);
 
-        GameObject localPlyer = PhotonNetwork.Instantiate("PlayerControl", Vector3.zero, Quaternion.identity, 0);
+		Vector3 randomPos = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        GameObject localPlyer = PhotonNetwork.Instantiate("PlayerControl", randomPos, Quaternion.identity, 0);
 		uiManager = localPlyer.GetComponent<CUIManager>();
 		characterManager = localPlyer.GetComponent<CCharacterManager>();
 

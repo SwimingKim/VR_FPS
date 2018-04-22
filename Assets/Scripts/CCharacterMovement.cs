@@ -26,17 +26,17 @@ public class CCharacterMovement : Photon.MonoBehaviour
 				photonView.RPC("Move", PhotonTargets.All, photonView.viewID);
         }
 
-        if (photonView.isMine)
-        {
+        // if (photonView.isMine)
+        // {
 
-        }
-        else
-        {
-            Vector3 pos = transform.position;
-            Quaternion rot = transform.rotation;
-            transform.position = Vector3.Lerp(pos, currPos, Time.deltaTime*3.0f);
-            transform.rotation = Quaternion.Slerp(transform.rotation, currRot, Time.deltaTime*3.0f);
-        }
+        // }
+        // else
+        // {
+        //     Vector3 pos = transform.position;
+        //     Quaternion rot = transform.rotation;
+        //     transform.position = Vector3.Lerp(pos, currPos, Time.deltaTime*3.0f);
+        //     transform.rotation = Quaternion.Slerp(transform.rotation, currRot, Time.deltaTime*3.0f);
+        // }
     }
 
     [PunRPC]
@@ -46,18 +46,18 @@ public class CCharacterMovement : Photon.MonoBehaviour
         _anim.PlayAnimation( cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE );
     }
 
-    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.isWriting)
-        {
-            stream.SendNext(cameraManager.transform.position);
-            stream.SendNext(cameraManager.transform.rotation);
-        }
-        else
-        {
-            currPos = (Vector3) stream.ReceiveNext();
-            currRot = (Quaternion) stream.ReceiveNext();
-        }
-    }
+    // void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    // {
+    //     if (stream.isWriting)
+    //     {
+    //         stream.SendNext(cameraManager.transform.position);
+    //         stream.SendNext(cameraManager.transform.rotation);
+    //     }
+    //     else
+    //     {
+    //         currPos = (Vector3) stream.ReceiveNext();
+    //         currRot = (Quaternion) stream.ReceiveNext();
+    //     }
+    // }
 
 }
