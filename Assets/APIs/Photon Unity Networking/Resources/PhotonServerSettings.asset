@@ -46,4 +46,5 @@ MonoBehaviour:
   - Move
   - Die
   - Damage
+  - MonsterDoAction
   DisableAutoOpenWizard: 1
