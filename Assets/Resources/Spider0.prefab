@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 114427393779969352}
   m_Layer: 8
   m_Name: Spider0
-  m_TagString: Untagged
+  m_TagString: Spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ef2b162ddbc48e089901e739db5cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 0
+  _hp: 20
   _hpProgress: {fileID: 114502888637540388}
   _pcSystem: {fileID: 198853745971279702}
 --- !u!114 &114350009471643788

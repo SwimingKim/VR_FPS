@@ -8,6 +8,8 @@ TagManager:
   - Fire
   - Bullet
   - Control
+  - Wall
+  - Spider
   layers:
   - Default
   - TransparentFX

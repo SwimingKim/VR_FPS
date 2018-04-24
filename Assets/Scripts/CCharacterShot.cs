@@ -9,7 +9,6 @@ public class CCharacterShot : Photon.MonoBehaviour
 
     CCharacterAnimation _anim;
 
-    public GameObject _bulletPrefab;
     public Transform _shotPos;
     public float _shotPower;
     public AudioClip _shotEffect;
@@ -43,7 +42,7 @@ public class CCharacterShot : Photon.MonoBehaviour
         _audioSource.PlayOneShot(_shotEffect, 0.1f);
         _anim.PlayAnimation(CAnimation.STATE.ATTACK);
 
-        GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
+        GameObject bullet = PhotonNetwork.Instantiate("Bullet", pos, qt, 0);
         bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;
         Destroy(bullet, 0.5f);
     }

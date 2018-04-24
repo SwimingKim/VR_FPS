@@ -7,7 +7,6 @@ public class CMonsterGenerator : Photon.MonoBehaviour
     public GameObject[] _monsterPrefabs;
     public Transform[] _genPoints;
     public float _genDelayTime;
-    public GameObject _spawnEffectPrefab;
 
     IEnumerator MonsterGenCoroutine()
     {
@@ -21,8 +20,7 @@ public class CMonsterGenerator : Photon.MonoBehaviour
                 continue;
             }
 
-            Instantiate(_spawnEffectPrefab, _genPoints[pointNum].position, Quaternion.identity);
-
+            PhotonNetwork.Instantiate("SpawnEffect", _genPoints[pointNum].position, Quaternion.identity, 0);
         	GameObject monster = PhotonNetwork.Instantiate("Spider"+Random.Range(0, _monsterPrefabs.Length),  _genPoints[pointNum].position, _genPoints[pointNum].rotation, 0);
             monster.transform.SetParent(_genPoints[pointNum]);
             yield return new WaitForSeconds(_genDelayTime);

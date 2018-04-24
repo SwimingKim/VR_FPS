@@ -2286,8 +2286,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114212036642502280}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 3
-  instantiationId: 3
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114019995099077668
@@ -2574,8 +2574,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114479901123897272}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 1
-  instantiationId: 1
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114316408300298536
@@ -2801,8 +2801,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootDelayTime: 0.5
-  _bulletPrefab: {fileID: 1606300977304108, guid: c4a457db7d7214398b754e01247549ba,
-    type: 2}
   _shotPos: {fileID: 4028319256836742}
   _shotPower: 100
   _shotEffect: {fileID: 8300000, guid: f6cb1f581b7444b23a05b613a16420d5, type: 3}
@@ -2971,7 +2969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9341df56e13e442a984a2caed6b477e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 0
+  _hp: 100
   _hpProgress: {fileID: 114210821026601930}
   _healthText: {fileID: 114960062782607468}
   _healthProfileImage: {fileID: 114799311850345122}
@@ -3186,8 +3184,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114682909791381654}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 2
-  instantiationId: 2
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114952463652751420
