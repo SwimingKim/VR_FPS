@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224108851750110246}
   - component: {fileID: 222224251344304156}
   - component: {fileID: 114271391927489944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GamePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 114816864088998624}
   - component: {fileID: 114411802668040982}
   - component: {fileID: 114419515448406952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 224541287247649816}
   - component: {fileID: 222244442072251310}
   - component: {fileID: 114300958215270760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GunPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 224300748572010886}
   - component: {fileID: 222615791038887272}
   - component: {fileID: 114961470413097130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: profile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 224814054061327292}
   - component: {fileID: 222162089223016950}
   - component: {fileID: 114467117745203952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 224140118903078488}
   - component: {fileID: 222454379372658194}
   - component: {fileID: 114767264413619654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 224067670415657200}
   - component: {fileID: 222756807275706368}
   - component: {fileID: 114839355243408794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 114152949083120498}
   - component: {fileID: 114844877771247604}
   - component: {fileID: 114780909735364578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerControl
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 224551145145540498}
   - component: {fileID: 222367296699386002}
   - component: {fileID: 114727283083060136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TopPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,8 @@ GameObject:
   - component: {fileID: 81286540154350230}
   - component: {fileID: 114369999580810164}
   - component: {fileID: 114495118759696902}
-  m_Layer: 0
+  - component: {fileID: 136153742446777174}
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -525,7 +526,7 @@ GameObject:
   - component: {fileID: 224862233356199998}
   - component: {fileID: 222655714593629076}
   - component: {fileID: 114980689727534722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PointPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +648,7 @@ GameObject:
   - component: {fileID: 224463804007382534}
   - component: {fileID: 222646570610622682}
   - component: {fileID: 114518344079605770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TotalHp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +680,7 @@ GameObject:
   - component: {fileID: 224624898994890774}
   - component: {fileID: 222194778131541826}
   - component: {fileID: 114099243964154818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +734,7 @@ GameObject:
   - component: {fileID: 224681538020850392}
   - component: {fileID: 222923604758257636}
   - component: {fileID: 114847551476268172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DownPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +813,7 @@ GameObject:
   - component: {fileID: 224911000278907082}
   - component: {fileID: 222863656728873080}
   - component: {fileID: 114515718220557728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1057,7 @@ GameObject:
   - component: {fileID: 222764310980115620}
   - component: {fileID: 114022177552749104}
   - component: {fileID: 111069476795543024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1091,7 @@ GameObject:
   - component: {fileID: 224397780114629704}
   - component: {fileID: 222889908859014862}
   - component: {fileID: 114808346365605740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CurrentHp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1123,7 @@ GameObject:
   - component: {fileID: 224608095406913396}
   - component: {fileID: 222641449326524414}
   - component: {fileID: 114117246441583950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1170,7 @@ GameObject:
   - component: {fileID: 224828513201111292}
   - component: {fileID: 222685113416255920}
   - component: {fileID: 114179788138178414}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CharacterPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1476,7 +1477,7 @@ Transform:
   - {fileID: 4237054837741678}
   - {fileID: 224134008972307120}
   m_Father: {fileID: 4649362952094716}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4376337043885206
 Transform:
@@ -1712,8 +1713,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224548294278978000}
   - {fileID: 4372300927048902}
+  - {fileID: 224548294278978000}
   m_Father: {fileID: 4284505156357040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2682,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animType: 0
-  isDie: 0
+  IsDie: 0
   _animSpeed: 1
 --- !u!114 &114727283083060136
 MonoBehaviour:
@@ -3096,6 +3097,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1349709463809868}
   m_Enabled: 1
+--- !u!136 &136153742446777174
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349709463809868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.44
+  m_Height: 2.08
+  m_Direction: 1
+  m_Center: {x: 0.32, y: -0.99, z: -0.54}
 --- !u!137 &137229348912780944
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -3554,7 +3568,7 @@ RectTransform:
   - {fileID: 224681538020850392}
   - {fileID: 224108851750110246}
   m_Father: {fileID: 4649362952094716}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

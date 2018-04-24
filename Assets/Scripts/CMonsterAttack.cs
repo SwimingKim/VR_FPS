@@ -37,7 +37,7 @@ public class CMonsterAttack : MonoBehaviour {
 	{
 		Collider[] hitColliders = Physics.OverlapSphere(_attackPoint.position, _attackRange, 1 << LayerMask.NameToLayer("Player"));
 		if (hitColliders.Length <= 0) return;
-		hitColliders[0].SendMessage("Damage");
+		hitColliders[0].transform.GetChild(0).SendMessage("Damage");
 	}
 
 }

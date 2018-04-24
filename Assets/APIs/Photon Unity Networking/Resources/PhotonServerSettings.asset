@@ -48,4 +48,5 @@ MonoBehaviour:
   - Damage
   - MonsterDoAction
   - MonsterGen
+  - PlayStateAnimation
   DisableAutoOpenWizard: 1

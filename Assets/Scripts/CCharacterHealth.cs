@@ -9,7 +9,7 @@ public class CCharacterHealth : Photon.MonoBehaviour
     public Image _healthImage;
     public Image _healthProfileImage;
     public Animation _backAnim;
-    
+
     public Image _targetImage;
     public Text _messageText;
     public Transform _charcterControl;
@@ -27,43 +27,31 @@ public class CCharacterHealth : Photon.MonoBehaviour
         UpdateHealthCount(100);
     }
 
-    void Update()
+    public void Damage()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            takeDamage(Random.Range(3, 8));
-        }
+        UpdatePlayerState(Random.Range(5, 8));
     }
 
-    public void takeDamage(int count)
+    void UpdatePlayerState(int count)
     {
         healthCount -= count;
 
         if (healthCount <= 0)
         {
+            GetComponentInParent<Collider>().enabled = false;
             _targetImage.enabled = false;
             _messageText.text = "다음기회에 도전하세요";
-            photonView.RPC("Die", PhotonTargets.All, photonView.ownerId);
+            GetComponent<Transform>().SetParent(_charcterControl);
+            UpdateHealthCount(0);
+            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CCharacterAnimation.ANIM_TYPE.DIE, photonView.ownerId);
+
+            Invoke("StartGame", 10);
             return;
         }
 
         _backAnim.Play();
-        photonView.RPC("Damage", PhotonTargets.All, healthCount, photonView.ownerId);
-    }
-
-    [PunRPC]
-    public void Die(int viewId)
-    {
-        GetComponent<Transform>().SetParent(_charcterControl);
-        UpdateHealthCount(0);
-        _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.DIE);
-    }
-
-    [PunRPC]
-    void Damage(int count, int viewId)
-    {
-        _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.DAMAGE);
-        UpdateHealthCount(count);
+        UpdateHealthCount(healthCount);
+        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CCharacterAnimation.ANIM_TYPE.DAMAGE, photonView.ownerId);
     }
 
     void UpdateHealthCount(int count)
@@ -72,6 +60,18 @@ public class CCharacterHealth : Photon.MonoBehaviour
         _healthImage.fillAmount = percentage;
         _healthProfileImage.fillAmount = percentage;
         _healthText.text = count + "/100";
+    }
+
+    void StartGame()
+    {
+        PhotonNetwork.LeaveRoom();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+    }
+
+    [PunRPC]
+    void PlayStateAnimation(CCharacterAnimation.ANIM_TYPE anim, int viewId)
+    {
+        _anim.PlayAnimation(anim);
     }
 
 }
