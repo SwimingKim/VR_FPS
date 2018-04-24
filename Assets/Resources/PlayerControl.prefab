@@ -2286,8 +2286,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114212036642502280}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 3
+  instantiationId: 3
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114019995099077668
@@ -2367,7 +2367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e66fbe68d0b742bd826d546ed963bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animType: 0
+  _state: 0
   IsDie: 0
   _animSpeed: 1
 --- !u!114 &114162003917923694
@@ -2574,8 +2574,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114479901123897272}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 1
+  instantiationId: 1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114316408300298536
@@ -2971,9 +2971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9341df56e13e442a984a2caed6b477e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hp: 0
+  _hpProgress: {fileID: 114210821026601930}
   _healthText: {fileID: 114960062782607468}
-  _healthImage: {fileID: 114799311850345122}
-  _healthProfileImage: {fileID: 114210821026601930}
+  _healthProfileImage: {fileID: 114799311850345122}
   _backAnim: {fileID: 111123411373221896}
   _targetImage: {fileID: 114019995099077668}
   _messageText: {fileID: 114402263262005696}
@@ -3185,8 +3186,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114682909791381654}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 2
+  instantiationId: 2
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114952463652751420

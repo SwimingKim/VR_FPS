@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class CMonsterAnimation : CAnimation {
 
-	CMonsterFSM _fsm;
-
-	protected override void Awake()
-	{
-		base.Awake();
-		_fsm = GetComponent<CMonsterFSM>();
-	}
-
     public override void PlayAnimation(STATE state)
 	{
 		switch (state)

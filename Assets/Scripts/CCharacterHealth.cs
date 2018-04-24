@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CCharacterHealth : CHealth
 {
     public Text _healthText;
-    public Image _healthImage;
     public Image _healthProfileImage;
     public Animation _backAnim;
 
@@ -50,7 +49,7 @@ public class CCharacterHealth : CHealth
     void UpdateHealthCount(int count)
     {
         float percentage = (float)(count * 0.01);
-        _healthImage.fillAmount = percentage;
+        _hpProgress.fillAmount = percentage;
         _healthProfileImage.fillAmount = percentage;
         _healthText.text = count + "/100";
     }
