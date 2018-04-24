@@ -33,7 +33,7 @@ public class CCharacterShot : Photon.MonoBehaviour
     [PunRPC]
     public void Shot(Vector3 pos, Vector3 forward, Quaternion qt, int viewId)
     {
-        if (_anim.IsDie()) return;
+        if (_anim.IsDie) return;
 
         _timer = 0f;
 

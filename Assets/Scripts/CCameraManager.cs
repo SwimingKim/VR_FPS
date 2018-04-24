@@ -18,7 +18,7 @@ public class CCameraManager : MonoBehaviour
 
     void Update()
     {
-        if (!IsRun || _anim.IsDie()) return;
+        if (!IsRun || _anim.IsDie) return;
 
         RaycastHit hit;
         Vector3 forwardDir = _camera.transform.TransformDirection(Vector3.forward);

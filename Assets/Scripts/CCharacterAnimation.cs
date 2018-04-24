@@ -10,7 +10,7 @@ public class CCharacterAnimation : MonoBehaviour
         IDLE, WALK, ATTACK, DAMAGE, DIE
     }
     public ANIM_TYPE _animType = ANIM_TYPE.IDLE;
-    public bool isDie = false;
+    public bool IsDie = false;
 
     private Animator _animator;
     public float _animSpeed;
@@ -40,15 +40,10 @@ public class CCharacterAnimation : MonoBehaviour
                 _animator.SetTrigger("Damage");
                 break;
             case ANIM_TYPE.DIE:
-                isDie = true;
+                IsDie = true;
                 _animator.SetTrigger("Death");
                 break;
         }
-    }
-
-    public bool IsDie()
-    {
-        return isDie;
     }
 
 }

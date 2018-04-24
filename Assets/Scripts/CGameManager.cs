@@ -10,6 +10,8 @@ public class CGameManager : MonoBehaviour
 	
 	public GameObject _introControl;
 	public GameObject _gameControl;
+	public CMonsterGenerator _monsterGenerator;
+
 	CUIManager uiManager;
 	CCharacterManager characterManager;
 
@@ -30,6 +32,7 @@ public class CGameManager : MonoBehaviour
 
 		_gamePanel.SetActive(false);
 		StartCoroutine("ShowTimer");
+		_monsterGenerator.StartCoroutine("MonsterGenCoroutine");
 	}
 
 	void OnCountOut()

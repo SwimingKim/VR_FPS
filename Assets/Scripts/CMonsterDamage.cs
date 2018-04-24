@@ -12,11 +12,13 @@ public class CMonsterDamage : Photon.MonoBehaviour {
 
 	CMonsterMovement _movement;
 	CMonsterFSM _fsm;
+	CMonsterAnimation _animator;
 
 	void Awake()
 	{
 		_movement = GetComponent<CMonsterMovement>();
 		_fsm = GetComponent<CMonsterFSM>();
+		_animator = GetComponent<CMonsterAnimation>();
 	}
 
 	[PunRPC]
@@ -43,7 +45,7 @@ public class CMonsterDamage : Photon.MonoBehaviour {
 	{
 		// _gameManager.MonsterDieCountUp();
 
-		// _animator.SetTrigger("Death");
+		_animator.PlayAnimation(CMonsterFSM.STATE.DIE);
 		_movement.Stop(); // 이동 중지
 		_fsm._state = CMonsterFSM.STATE.DIE;
 		Destroy(gameObject, 3f);
