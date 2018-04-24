@@ -2,34 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CMonsterAnimation : MonoBehaviour {
+public class CMonsterAnimation : CAnimation {
 
-	Animator _animator;
 	CMonsterFSM _fsm;
 
-	void Awake()
+	protected override void Awake()
 	{
-		_animator = GetComponent<Animator>();
+		base.Awake();
 		_fsm = GetComponent<CMonsterFSM>();
 	}
 
-	public void PlayAnimation(CMonsterFSM.STATE state)
+    public override void PlayAnimation(STATE state)
 	{
 		switch (state)
 		{
-			case CMonsterFSM.STATE.IDLE :
+			case CAnimation.STATE.IDLE :
 				_animator.SetBool("Walk", false);
 				_animator.SetBool("Attack", false);
 				break;
-			case CMonsterFSM.STATE.TRACE :
+			case CAnimation.STATE.WALK :
 				_animator.SetBool("Walk", true);
 				_animator.SetBool("Attack", false);
 				break;
-			case CMonsterFSM.STATE.ATTACK :
+			case CAnimation.STATE.ATTACK :
 				_animator.SetBool("Walk", false);
 				_animator.SetBool("Attack", true);
 				break;
-			case CMonsterFSM.STATE.DIE :
+			case CAnimation.STATE.DIE :
 				_animator.SetTrigger("Death");
 				break;
 		}

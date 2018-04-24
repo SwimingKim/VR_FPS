@@ -3,28 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CMonsterDamage : Photon.MonoBehaviour {
-
-	public int _hp;
-	public Image _hpProgress;
+public class CMonsterHealth : CHealth {
 
 	public ParticleSystem _pcSystem;
 
 	CMonsterMovement _movement;
 	CMonsterFSM _fsm;
-	CMonsterAnimation _animator;
 
-	void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		_movement = GetComponent<CMonsterMovement>();
 		_fsm = GetComponent<CMonsterFSM>();
-		_animator = GetComponent<CMonsterAnimation>();
 	}
 
-	[PunRPC]
-	public void Damage(int viewId)
+	protected override void Damage()
 	{
-		if (_fsm._state == CMonsterFSM.STATE.DIE) return;
+		if (_fsm._state == CAnimation.STATE.DIE) return;
 
 		if (!_pcSystem.isPlaying)
 		{
@@ -40,17 +35,14 @@ public class CMonsterDamage : Photon.MonoBehaviour {
 		}
 	}
 
-	[PunRPC]
-	public void Die(int viewId)
+	public void Die()
 	{
-		// _gameManager.MonsterDieCountUp();
+        // _gameManager.MonsterDieCountUp();
 
-		_animator.PlayAnimation(CMonsterFSM.STATE.DIE);
-		_movement.Stop(); // 이동 중지
-		_fsm._state = CMonsterFSM.STATE.DIE;
+        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
+		_movement.Stop();
+		_fsm._state = CAnimation.STATE.DIE;
 		Destroy(gameObject, 3f);
 	}
-
-
 
 }

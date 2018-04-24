@@ -9,11 +9,6 @@ public class CMonsterGenerator : Photon.MonoBehaviour
     public float _genDelayTime;
     public GameObject _spawnEffectPrefab;
 
-	// void Start()
-	// {
-	// 	StartCoroutine(MonsterGenCoroutine());
-	// }
-
     IEnumerator MonsterGenCoroutine()
     {
         while (true)

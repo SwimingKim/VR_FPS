@@ -25,7 +25,7 @@ public class CCharacterMovement : Photon.MonoBehaviour
     void Move(int viewId)
     {
         cameraManager.IsRun = !cameraManager.IsRun;
-        _anim.PlayAnimation(cameraManager.IsRun ? CCharacterAnimation.ANIM_TYPE.WALK : CCharacterAnimation.ANIM_TYPE.IDLE);
+        _anim.PlayAnimation(cameraManager.IsRun ? CAnimation.STATE.WALK : CAnimation.STATE.IDLE);
     }
 
 }

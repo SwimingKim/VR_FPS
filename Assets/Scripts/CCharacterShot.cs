@@ -41,7 +41,7 @@ public class CCharacterShot : Photon.MonoBehaviour
         _timer = 0f;
 
         _audioSource.PlayOneShot(_shotEffect, 0.1f);
-        _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
+        _anim.PlayAnimation(CAnimation.STATE.ATTACK);
 
         GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
         bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;

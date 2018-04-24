@@ -2,44 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CCharacterAnimation : MonoBehaviour
+public class CCharacterAnimation : CAnimation
 {
-
-    public enum ANIM_TYPE
-    {
-        IDLE, WALK, ATTACK, DAMAGE, DIE
-    }
-    public ANIM_TYPE _animType = ANIM_TYPE.IDLE;
+    public STATE _state = STATE.IDLE;
     public bool IsDie = false;
-
-    private Animator _animator;
     public float _animSpeed;
 
-    void Awake()
+    protected override void Awake()
     {
-        _animator = GetComponent<Animator>();
+        base.Awake();
         _animator.speed = _animSpeed;
     }
 
-    public void PlayAnimation(ANIM_TYPE animType)
+    public override void PlayAnimation(STATE state)
     {
-        _animType = animType;
+        _state = state;
 
-        switch (animType)
+        switch (state)
         {
-            case ANIM_TYPE.IDLE:
+            case STATE.IDLE:
                 _animator.SetFloat("Speed", 0f);
                 break;
-            case ANIM_TYPE.WALK:
+            case STATE.WALK:
                 _animator.SetFloat("Speed", 0.4f);
                 break;
-            case ANIM_TYPE.ATTACK:
+            case STATE.ATTACK:
                 _animator.SetTrigger("Attack");
                 break;
-            case ANIM_TYPE.DAMAGE:
+            case STATE.DAMAGE:
                 _animator.SetTrigger("Damage");
                 break;
-            case ANIM_TYPE.DIE:
+            case STATE.DIE:
                 IsDie = true;
                 _animator.SetTrigger("Death");
                 break;

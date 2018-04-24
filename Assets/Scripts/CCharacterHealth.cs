@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CCharacterHealth : Photon.MonoBehaviour
+public class CCharacterHealth : CHealth
 {
     public Text _healthText;
     public Image _healthImage;
@@ -14,44 +14,37 @@ public class CCharacterHealth : Photon.MonoBehaviour
     public Text _messageText;
     public Transform _charcterControl;
 
-    CCharacterAnimation _anim;
-    int healthCount = 100;
-
-    void Awake()
-    {
-        _anim = GetComponent<CCharacterAnimation>();
-    }
-
     void Start()
     {
-        UpdateHealthCount(100);
+        _hp = 100;
+        UpdateHealthCount(_hp);
     }
 
-    public void Damage()
+    protected override void Damage()
     {
-        UpdatePlayerState(Random.Range(5, 8));
+		UpdatePlayerState(Random.Range(5, 8));
     }
 
     void UpdatePlayerState(int count)
     {
-        healthCount -= count;
+        _hp -= count;
 
-        if (healthCount <= 0)
+        if (_hp <= 0)
         {
             GetComponentInParent<Collider>().enabled = false;
             _targetImage.enabled = false;
             _messageText.text = "다음기회에 도전하세요";
             GetComponent<Transform>().SetParent(_charcterControl);
             UpdateHealthCount(0);
-            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CCharacterAnimation.ANIM_TYPE.DIE, photonView.ownerId);
+            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
 
             Invoke("StartGame", 10);
             return;
         }
 
         _backAnim.Play();
-        UpdateHealthCount(healthCount);
-        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CCharacterAnimation.ANIM_TYPE.DAMAGE, photonView.ownerId);
+        UpdateHealthCount(_hp);
+        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DAMAGE, photonView.ownerId);
     }
 
     void UpdateHealthCount(int count)
@@ -66,12 +59,6 @@ public class CCharacterHealth : Photon.MonoBehaviour
     {
         PhotonNetwork.LeaveRoom();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
-    }
-
-    [PunRPC]
-    void PlayStateAnimation(CCharacterAnimation.ANIM_TYPE anim, int viewId)
-    {
-        _anim.PlayAnimation(anim);
     }
 
 }

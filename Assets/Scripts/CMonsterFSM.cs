@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CMonsterFSM : Photon.MonoBehaviour
 {
-    public enum STATE { IDLE, TRACE, ATTACK, DIE }
-    public STATE _state = STATE.IDLE;
+    public CAnimation.STATE _state = CAnimation.STATE.IDLE;
 
     CMonsterMovement _movement;
     CMonsterAnimation _anim;
@@ -29,11 +28,11 @@ public class CMonsterFSM : Photon.MonoBehaviour
 
     IEnumerator MonsterCheckFSMCoroutine()
     {
-        while (_state != STATE.DIE)
+        while (_state != CAnimation.STATE.DIE)
         {
             if (_attack._attackTarget == null)
             {
-                _state = CMonsterFSM.STATE.IDLE;
+                _state = CAnimation.STATE.IDLE;
                 yield return null;
                 continue;
             }
@@ -41,15 +40,15 @@ public class CMonsterFSM : Photon.MonoBehaviour
             float dist = _attack.GetAttackTargetDistance();
             if (dist <= _attackDist)
             {
-                _state = CMonsterFSM.STATE.ATTACK;
+                _state = CAnimation.STATE.ATTACK;
             }
             else if (dist <= _traceDist)
             {
-                _state = CMonsterFSM.STATE.TRACE;
+                _state = CAnimation.STATE.WALK;
             }
             else
             {
-                _state = CMonsterFSM.STATE.IDLE;
+                _state = CAnimation.STATE.IDLE;
             }
             yield return null;
         }
@@ -57,7 +56,7 @@ public class CMonsterFSM : Photon.MonoBehaviour
 
     IEnumerator MonsterDoActionCoroutine()
     {
-        while (_state != STATE.DIE)
+        while (_state != CAnimation.STATE.DIE)
         {
             photonView.RPC("MonsterDoAction", PhotonTargets.All, photonView.ownerId);
             yield return null;
@@ -69,17 +68,17 @@ public class CMonsterFSM : Photon.MonoBehaviour
     {
         switch (_state)
         {
-            case CMonsterFSM.STATE.IDLE:
+            case CAnimation.STATE.IDLE:
                 _movement.Stop();
-                _anim.PlayAnimation(CMonsterFSM.STATE.IDLE);
+                _anim.PlayAnimation(CAnimation.STATE.IDLE);
                 break;
-            case CMonsterFSM.STATE.ATTACK:
+            case CAnimation.STATE.ATTACK:
                 transform.LookAt(_attack._attackTarget.transform);
                 _movement.Stop();
-                _anim.PlayAnimation(CMonsterFSM.STATE.ATTACK);
+                _anim.PlayAnimation(CAnimation.STATE.ATTACK);
                 break;
-            case CMonsterFSM.STATE.TRACE:
-                _anim.PlayAnimation(CMonsterFSM.STATE.TRACE);
+            case CAnimation.STATE.WALK:
+                _anim.PlayAnimation(CAnimation.STATE.WALK);
                 _movement.Trace(_attack._attackTarget);
                 break;
         }
