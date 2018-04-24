@@ -12,10 +12,13 @@ public class CCharacterShot : Photon.MonoBehaviour
     public GameObject _bulletPrefab;
     public Transform _shotPos;
     public float _shotPower;
+    public AudioClip _shotEffect;
+    AudioSource _audioSource;
 
     void Awake()
     {
         _anim = GetComponent<CCharacterAnimation>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -37,6 +40,7 @@ public class CCharacterShot : Photon.MonoBehaviour
 
         _timer = 0f;
 
+        _audioSource.PlayOneShot(_shotEffect, 0.1f);
         _anim.PlayAnimation(CCharacterAnimation.ANIM_TYPE.ATTACK);
 
         GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
