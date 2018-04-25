@@ -7,40 +7,27 @@ public class CHealth : Photon.MonoBehaviour
 {
     CAnimation _animation;
 
-    public int _hp;
     public Image _hpProgress;
 
     protected virtual void Awake()
     {
         _animation = GetComponent<CAnimation>();
-        UpdateHealthCount();
     }
 
-    public virtual void Damage()
+    public virtual void Damage(int viewId)
     {
-		UpdatePlayerState(Random.Range(5, 8));
     }
 
-    protected virtual void UpdateHealthCount()
-    {
-
-    }
-
-	protected virtual void UpdatePlayerState(int count)
-	{
-
-	}
-
-	[PunRPC]
+    [PunRPC]
     public void PlayStateAnimation(CAnimation.STATE state, int viewId)
     {
-		_animation.PlayAnimation(state);
+        _animation.PlayAnimation(state);
     }
 
-	[PunRPC]
-	protected void Die()
-	{
-		PhotonNetwork.Destroy(gameObject);
-	}
+    [PunRPC]
+    protected void Die()
+    {
+        PhotonNetwork.Destroy(gameObject);
+    }
 
 }

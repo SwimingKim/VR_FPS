@@ -9,7 +9,6 @@ public class CMonsterAttack : MonoBehaviour {
 	
 	public Transform _attackPoint;
 	public float _attackRange;
-	public float _damage;
 
 	void Start () {
 		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
@@ -37,7 +36,7 @@ public class CMonsterAttack : MonoBehaviour {
 	{
 		Collider[] hitColliders = Physics.OverlapSphere(_attackPoint.position, _attackRange, 1 << LayerMask.NameToLayer("Player"));
 		if (hitColliders.Length <= 0) return;
-		hitColliders[0].transform.GetChild(0).SendMessage("Damage");
+		hitColliders[0].transform.GetChild(0).SendMessage("Damage", -1);
 	}
 
 }

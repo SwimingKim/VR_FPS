@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CCharacterHealth : CHealth
 {
+    public int _hp = 100;
     public Text _healthText;
     public Image _healthProfileImage;
     public Animation _backAnim;
@@ -13,9 +14,9 @@ public class CCharacterHealth : CHealth
     public Text _messageText;
     public Transform _charcterControl;
 
-    protected override void UpdatePlayerState(int count)
+    public override void Damage(int viewId)
     {
-        _hp -= count;
+        _hp -= Random.Range(5, 8);
 
         if (_hp <= 0)
         {
@@ -36,12 +37,12 @@ public class CCharacterHealth : CHealth
         photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DAMAGE, photonView.ownerId);
     }
 
-    protected override void UpdateHealthCount()
+    void UpdateHealthCount()
     {
         float percentage = (float)(_hp * 0.01);
         _hpProgress.fillAmount = percentage;
         _healthProfileImage.fillAmount = percentage;
-        _healthText.text = _hp + "/100";
+        _healthText.text = _hp + " / 100";
     }
 
     void StartGame()

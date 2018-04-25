@@ -1911,7 +1911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
-  _attackDist: 5
+  _attackDist: 3
   _traceDist: 30
 --- !u!114 &114086289062607132
 MonoBehaviour:
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ef2b162ddbc48e089901e739db5cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 25
+  _hp: 30
   _hpProgress: {fileID: 114787313854421540}
   _pcSystem: {fileID: 198545189510716028}
 --- !u!114 &114220520420782274
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackTarget: {fileID: 0}
   _attackPoint: {fileID: 4828809781384210}
-  _attackRange: 1.2
+  _attackRange: 1.5
   _damage: 5
 --- !u!114 &114461183554065590
 MonoBehaviour:

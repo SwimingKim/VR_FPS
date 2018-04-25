@@ -17,7 +17,7 @@ public class CMonsterHealth : CHealth
         _fsm = GetComponent<CMonsterFSM>();
     }
 
-    protected override void UpdatePlayerState(int count)
+    public override void Damage(int viewId)
     {
         if (_fsm._state == CAnimation.STATE.DIE) return;
 
@@ -26,23 +26,21 @@ public class CMonsterHealth : CHealth
             _pcSystem.Play();
         }
 
-        _hp -= count;
-		UpdateHealthCount();
-
-        if (_hp <= 0)
+        float power = (float)(Random.Range(30, 40) * 0.01);
+        _hpProgress.fillAmount -= power;
+        if (_hpProgress.fillAmount <= 0)
         {
+            if (PhotonNetwork.player.ID == viewId) {
+                PhotonNetwork.player.AddScore(1);
+            }
+
             _movement.Stop();
             _fsm._state = CAnimation.STATE.DIE;
             photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
 
             Invoke("Die", 3f);
         }
-    }
 
-	protected override void UpdateHealthCount()
-	{
-        float percentage = (float)(_hp * 0.2);
-        _hpProgress.fillAmount = percentage;
-	}
+    }
 
 }
