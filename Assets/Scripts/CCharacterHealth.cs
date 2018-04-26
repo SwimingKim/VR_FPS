@@ -16,15 +16,21 @@ public class CCharacterHealth : CHealth
 
     public override void Damage(int viewId)
     {
+        if (((CCharacterAnimation)_animation)._state == CCharacterAnimation.STATE.DIE) return;
+
         _hp -= Random.Range(5, 8);
 
         if (_hp <= 0)
         {
             _hp = 0;
             UpdateHealthCount();
-            GetComponentInParent<Collider>().enabled = false;
+            foreach (var item in GetComponentsInParent<Collider>())
+            {
+                item.enabled = false;
+            }
             _targetImage.enabled = false;
             _messageText.text = "다음기회에 도전하세요";
+            _charcterControl.GetComponent<Rigidbody>().useGravity = false;
             GetComponent<Transform>().SetParent(_charcterControl);
             photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CMonsterGenerator : Photon.MonoBehaviour
 {
+    public GameObject _spawnEffectPrefab;
+
     public GameObject[] _monsterPrefabs;
     public Transform[] _genPoints;
     public float _genDelayTime;
@@ -22,7 +24,6 @@ public class CMonsterGenerator : Photon.MonoBehaviour
 
             PhotonNetwork.Instantiate("SpawnEffect", _genPoints[pointNum].position, Quaternion.identity, 0);
         	GameObject monster = PhotonNetwork.Instantiate("Spider"+Random.Range(0, _monsterPrefabs.Length),  _genPoints[pointNum].position, _genPoints[pointNum].rotation, 0);
-            monster.transform.SetParent(_genPoints[pointNum]);
             yield return new WaitForSeconds(_genDelayTime);
         }
     }

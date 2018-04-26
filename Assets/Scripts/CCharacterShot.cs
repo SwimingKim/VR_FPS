@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CCharacterShot : Photon.MonoBehaviour
 {
+    public GameObject _bulletPrefab;
     public float _shootDelayTime;
     float _timer;
 
@@ -53,10 +54,11 @@ public class CCharacterShot : Photon.MonoBehaviour
         _audioSource.PlayOneShot(_shotEffect, 0.1f);
         _anim.PlayAnimation(CAnimation.STATE.ATTACK);
 
-        GameObject bullet = PhotonNetwork.Instantiate("Bullet", pos, qt, 0);
+        GameObject bullet = Instantiate(_bulletPrefab, pos, qt);
         bullet.GetComponentInChildren<Rigidbody>().velocity = forward * _shotPower;
         bullet.GetComponentInChildren<CBullet>()._ownerId = photonView.ownerId;
         Destroy(bullet, 0.5f);
+
     }
 
 }

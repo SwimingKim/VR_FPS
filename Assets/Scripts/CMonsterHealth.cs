@@ -30,7 +30,8 @@ public class CMonsterHealth : CHealth
         _hpProgress.fillAmount -= power;
         if (_hpProgress.fillAmount <= 0)
         {
-            if (PhotonNetwork.player.ID == viewId) {
+            if (PhotonNetwork.player.ID == viewId)
+            {
                 PhotonNetwork.player.AddScore(1);
             }
 
@@ -38,9 +39,13 @@ public class CMonsterHealth : CHealth
             _fsm._state = CAnimation.STATE.DIE;
             photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
 
-            Invoke("Die", 3f);
+            Invoke("MonsterDie", 3f);
         }
+    }
 
+    void MonsterDie()
+    {
+        photonView.RPC("Die", PhotonTargets.AllViaServer);
     }
 
 }

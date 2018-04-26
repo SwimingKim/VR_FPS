@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CHealth : Photon.MonoBehaviour
 {
-    CAnimation _animation;
+    protected CAnimation _animation;
 
     public Image _hpProgress;
 
