@@ -30,7 +30,7 @@ public class CCharacterHealth : CHealth
             }
             _targetImage.enabled = false;
             _messageText.text = "다음기회에 도전하세요";
-            _charcterControl.GetComponent<Rigidbody>().useGravity = false;
+            _charcterControl.GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<Transform>().SetParent(_charcterControl);
             Vector3 pos = transform.position;
             transform.position.Set(pos.x, 5, pos.y);
