@@ -58,13 +58,13 @@ public class CMonsterFSM : Photon.MonoBehaviour
     {
         while (_state != CAnimation.STATE.DIE)
         {
-            photonView.RPC("MonsterDoAction", PhotonTargets.All, photonView.ownerId);
+            photonView.RPC("MonsterDoAction", PhotonTargets.AllViaServer);
             yield return null;
         }
     }
 
     [PunRPC]
-    void MonsterDoAction(int viewId)
+    void MonsterDoAction()
     {
         switch (_state)
         {

@@ -32,7 +32,9 @@ public class CCharacterHealth : CHealth
             _messageText.text = "다음기회에 도전하세요";
             _charcterControl.GetComponent<Rigidbody>().useGravity = false;
             GetComponent<Transform>().SetParent(_charcterControl);
-            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
+            Vector3 pos = transform.position;
+            transform.position.Set(pos.x, 5, pos.y);
+            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE);
 
             Invoke("StartGame", 10);
             return;
@@ -40,7 +42,7 @@ public class CCharacterHealth : CHealth
 
         UpdateHealthCount();
         _backAnim.Play();
-        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DAMAGE, photonView.ownerId);
+        photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DAMAGE);
     }
 
     void UpdateHealthCount()

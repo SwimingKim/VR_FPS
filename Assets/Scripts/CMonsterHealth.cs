@@ -37,7 +37,7 @@ public class CMonsterHealth : CHealth
 
             _movement.Stop();
             _fsm._state = CAnimation.STATE.DIE;
-            photonView.RPC("PlayStateAnimation", PhotonTargets.All, CAnimation.STATE.DIE, photonView.ownerId);
+            photonView.RPC("PlayStateAnimation", PhotonTargets.AllViaServer, CAnimation.STATE.DIE);
 
             Invoke("MonsterDie", 3f);
         }

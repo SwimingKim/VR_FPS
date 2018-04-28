@@ -17,12 +17,12 @@ public class CCharacterMovement : Photon.MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (photonView.isMine)
-				photonView.RPC("Move", PhotonTargets.All, photonView.viewID);
+				photonView.RPC("Move", PhotonTargets.AllViaServer);
         }
     }
 
     [PunRPC]
-    void Move(int viewId)
+    void Move()
     {
         cameraManager.IsRun = !cameraManager.IsRun;
         _anim.PlayAnimation(cameraManager.IsRun ? CAnimation.STATE.WALK : CAnimation.STATE.IDLE);

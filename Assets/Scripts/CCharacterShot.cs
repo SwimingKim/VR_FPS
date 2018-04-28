@@ -22,11 +22,6 @@ public class CCharacterShot : Photon.MonoBehaviour
     {
         _anim = GetComponent<CCharacterAnimation>();
         _audioSource = GetComponent<AudioSource>();
-
-        // if (PhotonNetwork.connected)
-        // {
-        //     photonView.owner.SetScore(0);
-        // }
     }
 
     void FixedUpdate()
@@ -37,7 +32,7 @@ public class CCharacterShot : Photon.MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift) && _timer >= _shootDelayTime && Time.timeScale != 0)
             {
-                photonView.RPC("Shot", PhotonTargets.All, _shotPos.position, _shotPos.forward, transform.rotation, photonView.viewID);
+                photonView.RPC("Shot", PhotonTargets.All, _shotPos.position, _shotPos.forward, transform.rotation);
             }
         }
 
@@ -45,7 +40,7 @@ public class CCharacterShot : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    public void Shot(Vector3 pos, Vector3 forward, Quaternion qt, int viewId)
+    public void Shot(Vector3 pos, Vector3 forward, Quaternion qt)
     {
         if (_anim.IsDie) return;
 

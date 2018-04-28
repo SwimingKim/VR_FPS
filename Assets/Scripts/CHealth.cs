@@ -19,7 +19,7 @@ public class CHealth : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    public void PlayStateAnimation(CAnimation.STATE state, int viewId)
+    public void PlayStateAnimation(CAnimation.STATE state)
     {
         _animation.PlayAnimation(state);
     }
