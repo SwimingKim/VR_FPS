@@ -9,6 +9,8 @@ public class CCanvasSize : MonoBehaviour
         RectTransform rt = GetComponent<RectTransform>();
 #if UNITY_ANDROID && !UNITY_EDITOR
 		rt.sizeDelta = new Vector2(1920, 1450);
+#elif UNITY_IOS && !UNITY_EDITOR
+		rt.sizeDelta = new Vector2(1920, 1600);
 #endif
 
         if (PhotonNetwork.connected && !GetComponentInParent<PhotonView>().isMine)
